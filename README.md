@@ -19,13 +19,12 @@ and notes on development.
 
 ## Documentation
 
-Documentation, included in this repo in the [docs](https://github.com/iswai/website/tree/master/docs) directory, is
-built with [Hugo](https://iswai.github.io/iswai-docs/) and publicly hosted on GitHub Pages at
+Documentation, included in this repo in the [docs](https://github.com/iswai/website/tree/master/docs) directory,
+is built with [iswai/docs-sdk](https://iswai.github.io/docs-sdk/) and publicly hosted on GitHub Pages at
 <https://iswai.github.io/>.
 
 ## Copyright and license
 
-Code and documentation copyright 2019 the [contributors](https://github.com/iswai/website/graphs/contributors)
-and [Geert Eltink](https://www.elt.ink/).
-Code released under the [MIT License](https://github.com/iswai/website/blob/master/LICENSE.md).
-Docs released under [Creative Commons (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+© 2019 [Geert Eltink](https://www.elt.ink/) |
+Code released under [MIT License](https://github.com/iswai/website/blob/master/LICENSE.md). |
+Documentation distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
