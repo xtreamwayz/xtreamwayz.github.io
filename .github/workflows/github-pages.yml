@@ -13,11 +13,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Prepare
-      env:
-        PUBLISH_BRANCH: master
-      run: wget -O - https://raw.githubusercontent.com/iswai/docs-sdk/master/actions/gh-pages-prepare | bash
-
     - name: Build
       uses: docker://iswai/docs:latest
       with:
