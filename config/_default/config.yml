@@ -1,0 +1,21 @@
+baseURL: "http://localhost/"
+languageCode: "en-us"
+title: "ISWAI"
+
+#contentDir: docs
+#publishDir: build
+
+enableGitInfo: true
+enableInlineShortcodes: true
+googleAnalytics: UA-151173516-1
+
+pygmentsCodeFences: true
+pygmentsOptions: linenos=table
+pygmentsUseClasses: true
+pygmentsUseClassic: false
+
+disableKinds:
+- taxonomy
+- taxonomyTerm
+- RSS
+- sitemap

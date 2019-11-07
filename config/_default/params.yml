@@ -1,0 +1,5 @@
+organization: iswai
+
+projects:
+  - "devops"
+  - "docs-sdk"

@@ -1,0 +1,53 @@
+{{ define "title" }}{{ .Title }} &ndash; {{ site.Title }}{{ end }}
+{{ define "main" }}
+<main class="app-content">
+    <article class="container">
+        <header>
+            <h1>{{ .Page.Title }}</h1>
+        </header>
+        <div class="d-flex">
+            <div class="flex-grow-1">
+                {{ .TableOfContents }}
+            </div>
+            {{ if .File }}
+            <nav class="nav flex-column nav-pills">
+                {{ if (site.Param .Params.project).latest }}
+                <div class="dropdown">
+                    <a class="nav-link btn btn-sm btn-primary m-1 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        version {{ .Params.version | default (site.Param .Params.project).latest }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="{{ printf "%s/latest/" .Params.project | absURL }}">
+                            Latest ({{ (site.Param .Params.project).latest }})
+                        </a>
+                        {{ if (site.Param .Params.project).develop }}
+                        <a class="dropdown-item" href="{{ printf "%s/develop/" .Params.project | absURL }}">
+                            Develop ({{ (site.Param .Params.project).develop }})
+                        </a>
+                        {{ end }}
+                        {{ range $version := (site.Param .Params.project).versions }}
+                        <a class="dropdown-item" href="{{ $version | printf "%s/%s/" $.Params.project | absURL }}">
+                            v{{ $version }}
+                        </a>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+                <a class="nav-link btn btn-sm btn-primary m-1"
+                    href="https://github.com/{{ site.Params.organization }}/{{ .Params.project }}/edit/master/docs/{{ .File.Path }}">
+                    Improve this page
+                </a>
+                <a class="nav-link btn btn-sm btn-primary m-1"
+                    href="https://github.com/{{ site.Params.organization }}/{{ .Params.project }}/issues/new?template=bug-report.md&title=docs:%20issue%20with%20{{ .File.Path }}">
+                    Report issue
+                </a>
+            </nav>
+            {{ end }}
+        </div>
+        {{ .Content }}
+        <footer class="my-5 text-muted">
+            This page, including the code samples, is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC BY 4.0</a> license.
+        </footer>
+    </article>
+</main>
+{{ end }}

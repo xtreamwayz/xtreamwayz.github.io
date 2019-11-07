@@ -1,0 +1,17 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+}
+
+.app-footer {
+  color: $gray-500;
+}
+
+.app-footer a {
+  color: $light;
+}
