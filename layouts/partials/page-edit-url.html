@@ -1,3 +1,3 @@
 {{- $pname:= print "^" .project "/" -}}
 {{- $fname:= replaceRE $pname "" .file -}}
-{{ printf "https://github.com/%s/%s/edit/master/docs/%s" site.Params.organization .project $fname }}
+{{- printf "https://github.com/%s/%s/edit/master/docs/%s" site.Params.organization .project $fname -}}

@@ -34,7 +34,7 @@
                 </div>
                 {{ end }}
                 <a class="nav-link btn btn-sm btn-primary m-1"
-                    href="{{ partial "page-edit-url.html" (dict "project" .Params.project "file" .File.Path) }}">
+                    href="{{- partial "page-edit-url.html" (dict "project" .Params.project "file" .File.Path) -}}">
                     Improve this page
                 </a>
                 <a class="nav-link btn btn-sm btn-primary m-1"
