@@ -2,6 +2,19 @@
 
 [![Docs Status](https://github.com/iswai/website/workflows/github-pages/badge.svg)](https://github.com/iswai/website/actions)
 
+## Development
+
+```bash
+hugo mod init website
+hugo server
+```
+
+For local development of package documentation, add this to `go.mod`
+
+```golang
+require github.com/iswai/<project> -> /path/to/project/source/
+```
+
 ## Documentation
 
 All project documentation is located in the [./docs](./docs) folder. If you would like to contribute
