@@ -7,9 +7,6 @@
         </header>
         {{ .TableOfContents }}
         {{ .Content }}
-        <footer>
-            {{ partial "git-info.html" . }}
-        </footer>
     </article>
     <ul itemscope="itemscope" itemtype="http://schema.org/Blog" class="container timeline">
         {{ range .Pages.ByDate.Reverse }}
