@@ -1,0 +1,24 @@
+{{- $project:= .context.Params.project -}}
+{{- $current:= .context.Params.version -}}
+{{- $latest:= (site.Param $project).latest -}}
+{{- $versions:= (site.Param $project).versions -}}
+{{- $id:= print .idPrefix "-" $project "-" $current -}}
+{{- if $latest -}}
+<div class="dropdown">
+    <a class="{{ .class }} dropdown-toggle" href="#" role="button" id="{{ $id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ if ne .idPrefix "header" }}Version{{ end }} {{ $current | default $latest }}
+    </a>
+    <div class="dropdown-menu" aria-labelledby="{{ $id }}">
+        <a class="dropdown-item" href="{{ printf "%s/latest/" $project | absURL }}">
+            Latest ({{ $latest }})
+        </a>
+        {{ range $version := $versions }}
+        {{ if ne $version $latest }}
+        <a class="dropdown-item" href="{{ $version | printf "%s/%s/" $project | absURL }}">
+            {{ $version }}
+        </a>
+        {{ end }}
+        {{ end }}
+    </div>
+</div>
+{{- end -}}

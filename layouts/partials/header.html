@@ -17,28 +17,7 @@
                     {{ end }}
                 </div>
             </li>
-            {{ if (site.Param .Params.project).latest }}
-            <li class="nav-item dropdown">
-                <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{ .Params.version | default "version" }}
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-                    <a class="dropdown-item {{ if eq $.Params.version (site.Param .Params.project).latest }}active{{ end }}" href="{{ printf "%s/latest/" .Params.project | absURL }}">
-                        Latest ({{ (site.Param .Params.project).latest }})
-                    </a>
-                    {{ if (site.Param .Params.project).develop }}
-                    <a class="dropdown-item {{ if eq $.Params.version (site.Param .Params.project).develop }}active{{ end }}" href="{{ printf "%s/develop/" .Params.project | absURL }}">
-                        Develop ({{ (site.Param .Params.project).develop }})
-                    </a>
-                    {{ end }}
-                    {{ range $version := (site.Param .Params.project).versions }}
-                    <a class="dropdown-item {{ if eq $.Params.version $version }}active{{ end }}" href="{{ $version | printf "%s/%s/" $.Params.project | absURL }}">
-                        v{{ $version }}
-                    </a>
-                    {{ end }}
-                </div>
-            </li>
-            {{ end }}
+            {{- partial "versions" (dict "context" . "idPrefix" "header" "class" "nav-item nav-link mr-md-2") -}}
         </ul>
     </nav>
 </header>
