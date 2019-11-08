@@ -9,10 +9,11 @@ hugo mod init website
 hugo server
 ```
 
-For local development of package documentation, add this to `go.mod`
+For local development of package documentation, add one of these to `go.mod`
 
 ```golang
-require github.com/xtreamwayz/<project> -> /path/to/project/source/
+replace github.com/xtreamwayz/<project> => ../<project>
+replace github.com/xtreamwayz/<project> => /Users/username/projects/<project>
 ```
 
 ## GitHub pages integration
