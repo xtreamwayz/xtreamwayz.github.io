@@ -21,8 +21,8 @@ Add this file to a repository to trigger new builds if a file changed in the
 docs path. The `NETLIFY_CRON_BUILD_HOOK` secret must also be set.
 
 ```yaml
-# .github/workflows/docs.yml
-name: docs
+# .github/workflows/build-docs.yml
+name: build-docs
 
 on:
   push:
