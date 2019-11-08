@@ -6,7 +6,7 @@
 {{- if $latest -}}
 <div class="dropdown">
     <a class="{{ .class }} dropdown-toggle" href="#" role="button" id="{{ $id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        {{ if ne .idPrefix "header" }}Version{{ end }} {{ $current | default $latest }}
+        {{ if $current }}Version {{ $current }}{{ else }}Select version{{ end }}
     </a>
     <div class="dropdown-menu" aria-labelledby="{{ $id }}">
         <a class="dropdown-item" href="{{ printf "%s/latest/" $project | absURL }}">
