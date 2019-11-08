@@ -17,5 +17,3 @@ pygmentsUseClassic: false
 disableKinds:
 - taxonomy
 - taxonomyTerm
-- RSS
-- sitemap
