@@ -4,3 +4,4 @@ projects:
   - "devops"
   - "expressive-console"
   - "expressive-messenger"
+  - "html-form-validator"

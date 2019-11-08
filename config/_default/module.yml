@@ -15,3 +15,7 @@ imports:
     mounts:
       - source: "docs"
         target: "content/expressive-messenger"
+  - path: "github.com/xtreamwayz/html-form-validator"
+    mounts:
+      - source: "docs"
+        target: "content/html-form-validator"
