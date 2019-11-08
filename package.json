@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iswai/website.git"
+    "url": "git+https://github.com/xtreamwayz/website.git"
   },
   "author": "Geert Eltink (https://www.elt.ink/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iswai/website/issues"
+    "url": "https://github.com/xtreamwayz/website/issues"
   },
-  "homepage": "https://github.com/iswai/website#readme",
+  "homepage": "https://github.com/xtreamwayz/website#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
     "autoprefixer": "^9.7.1",

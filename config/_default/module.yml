@@ -3,7 +3,7 @@ hugoVersion:
   min: "0.59.0"
 
 imports:
-  - path: "github.com/iswai/devops"
+  - path: "github.com/xtreamwayz/devops"
     mounts:
       - source: "docs"
         target: "content/devops"

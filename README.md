@@ -1,6 +1,6 @@
-# Source code for iswai.github.io
+# Source code for xtreamwayz.netlify.com
 
-[![Docs Status](https://github.com/iswai/website/workflows/github-pages/badge.svg)](https://github.com/iswai/website/actions)
+[![Docs Status](https://github.com/xtreamwayz/website/workflows/github-pages/badge.svg)](https://github.com/xtreamwayz/website/actions)
 
 ## Development
 
@@ -12,7 +12,7 @@ hugo server
 For local development of package documentation, add this to `go.mod`
 
 ```golang
-require github.com/iswai/<project> -> /path/to/project/source/
+require github.com/xtreamwayz/<project> -> /path/to/project/source/
 ```
 
 ## GitHub pages integration
@@ -45,15 +45,15 @@ jobs:
 
 All project documentation is located in the [./docs](./docs) folder. If you would like to contribute
 to the documentation, please submit a pull request. You can read the docs online:
-https://iswai.netlify.com/
+https://xtreamwayz.netlify.com/
 
 ## Contributing
 
 ***BEFORE you start work on a feature or fix***, please read & follow the
-[contributing guidelines](https://github.com/iswai/.github/blob/master/CONTRIBUTING.md#contributing)
+[contributing guidelines](https://github.com/xtreamwayz/.github/blob/master/CONTRIBUTING.md#contributing)
 to help avoid any wasted or duplicate effort.
 
 ## Copyright and license
 
-Code released under the [MIT License](https://github.com/iswai/.github/blob/master/LICENSE.md).
+Code released under the [MIT License](https://github.com/xtreamwayz/.github/blob/master/LICENSE.md).
 Documentation distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
