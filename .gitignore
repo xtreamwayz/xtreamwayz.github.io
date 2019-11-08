@@ -1,3 +1,5 @@
+go.mod
+go.sum
 _vendor
 build
 node_modules
