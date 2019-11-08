@@ -1,6 +1,6 @@
 baseURL: "http://localhost/"
 languageCode: "en-us"
-title: "XTREAMWAYZ"
+title: "xtreamwayz"
 
 enableGitInfo: true
 enableInlineShortcodes: true
