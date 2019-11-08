@@ -18,7 +18,7 @@ require github.com/iswai/<project> -> /path/to/project/source/
 ## GitHub pages integration
 
 Add this file to a repository to trigger new builds if a file changed in the
-docs path. The `NETLIFY_CRON_BUILD_HOOK` secret must also be set.
+docs path. The `NETLIFY_DOCS_BUILD_HOOK` secret must also be set.
 
 ```yaml
 # .github/workflows/build-docs.yml
@@ -38,7 +38,7 @@ jobs:
     - name: Trigger build webhook on Netlify
       run: curl -s -X POST "https://api.netlify.com/build_hooks/${TOKEN}"
       env:
-        TOKEN: ${{ secrets.NETLIFY_CRON_BUILD_HOOK }}
+        TOKEN: ${{ secrets.NETLIFY_DOCS_BUILD_HOOK }}
 ```
 
 ## Documentation
