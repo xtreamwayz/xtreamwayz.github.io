@@ -44,7 +44,8 @@ jobs:
 ## Documentation
 
 All project documentation is located in the [./docs](./docs) folder. If you would like to contribute
-to the documentation, please submit a pull request.
+to the documentation, please submit a pull request. You can read the docs online:
+https://iswai.netlify.com/
 
 ## Contributing
 
