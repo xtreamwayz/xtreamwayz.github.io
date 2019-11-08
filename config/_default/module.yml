@@ -7,3 +7,7 @@ imports:
     mounts:
       - source: "docs"
         target: "content/devops"
+  - path: "github.com/xtreamwayz/expressive-console"
+    mounts:
+      - source: "docs"
+        target: "content/expressive-console"
