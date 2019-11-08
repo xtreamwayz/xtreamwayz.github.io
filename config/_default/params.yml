@@ -3,3 +3,4 @@ organization: xtreamwayz
 projects:
   - "devops"
   - "expressive-console"
+  - "expressive-messenger"

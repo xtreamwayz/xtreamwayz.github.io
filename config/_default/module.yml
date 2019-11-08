@@ -11,3 +11,7 @@ imports:
     mounts:
       - source: "docs"
         target: "content/expressive-console"
+  - path: "github.com/xtreamwayz/expressive-messenger"
+    mounts:
+      - source: "docs"
+        target: "content/expressive-messenger"
