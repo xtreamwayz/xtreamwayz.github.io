@@ -37,8 +37,10 @@ $info:          $cyan !default;
 $warning:       $orange !default;
 $danger:        $red !default;
 
+$body-bg:       #121212;
+$body-color:    #ffffff;
 $primary:       #ff4f00;
-$secondary:     #006ec7 ;
+$secondary:     #006ec7;
 $dark:          #1e1e1e;
 $light:         #454545;
 
@@ -46,10 +48,13 @@ $light:         #454545;
 
 $enable-rounded: false !default;
 
-// Body
+// Theme colors to try out
 
-$body-bg:       #121212;
-$body-color:    #ffffff;
+$body-bg:       #0b0732;
+$primary:       #ff4f00;
+$secondary:     #4450de;
+$dark:          #232046;
+$light:         #4d4772;
 
 // Links
 
