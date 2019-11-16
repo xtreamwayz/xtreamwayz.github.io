@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-    {{ $styles := resources.Get "style/main.scss" | toCSS | resources.PostCSS | resources.Minify | fingerprint }}
+    {{ $styles := resources.Get "style/main.scss" | toCSS | resources.PostCSS | resources.Minify | fingerprint "sha512" }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 </head>
 
