@@ -17,8 +17,8 @@
   "homepage": "https://github.com/xtreamwayz/website#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
-    "autoprefixer": "^9.7.1",
-    "bootstrap": "^4.3.1",
+    "autoprefixer": "^9.7.2",
+    "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0",
     "postcss-cli": "^6.1.3"
