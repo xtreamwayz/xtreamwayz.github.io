@@ -1,6 +1,6 @@
 # Source code for xtreamwayz.netlify.com
 
-[![Docs Status](https://github.com/xtreamwayz/website/workflows/github-pages/badge.svg)](https://github.com/xtreamwayz/website/actions)
+[![Docs Status](https://github.com/xtreamwayz/website/workflows/github-pages/badge.svg)](https://xtreamwayz.netlify.app/)
 
 ## Development
 
@@ -46,7 +46,7 @@ jobs:
 
 All project documentation is located in the [./docs](./docs) folder. If you would like to contribute
 to the documentation, please submit a pull request. You can read the docs online:
-https://xtreamwayz.netlify.com/
+https://xtreamwayz.netlify.app/
 
 ## Contributing
 
