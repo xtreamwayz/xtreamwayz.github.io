@@ -1,6 +1,6 @@
 # Source code for xtreamwayz.netlify.com
 
-[![Docs Status](https://github.com/xtreamwayz/website/workflows/github-pages/badge.svg)](https://xtreamwayz.netlify.app/)
+[![Docs Status](https://github.com/xtreamwayz/website/workflows/github-pages/badge.svg)](https://xtreamwayz.netlify.com/)
 
 ## Development
 
