@@ -1,7 +1,7 @@
 organization: xtreamwayz
 
 projects:
-  - "devops"
-  - "expressive-console"
-  - "expressive-messenger"
+  - "psr-container-messenger"
   - "html-form-validator"
+  - "expressive-console"
+  - "devops"

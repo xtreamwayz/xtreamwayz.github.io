@@ -16,11 +16,11 @@
   },
   "homepage": "https://github.com/xtreamwayz/website#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.2",
-    "autoprefixer": "^9.7.2",
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "autoprefixer": "^9.7.6",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.16.0",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1",
     "postcss-cli": "^6.1.3"
   }
 }
