@@ -1,6 +1,6 @@
 hugoVersion:
   extended: true
-  min: "0.59.0"
+  min: "0.69.0"
 
 imports:
   - path: "github.com/xtreamwayz/psr-container-messenger"
