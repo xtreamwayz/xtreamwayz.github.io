@@ -1,6 +1,6 @@
-# Source code for xtreamwayz.netlify.com
+# Source code for xtreamwayz.netlify.app
 
-[![Docs Status](https://github.com/xtreamwayz/website/workflows/github-pages/badge.svg)](https://xtreamwayz.netlify.com/)
+[![Docs Status](https://github.com/xtreamwayz/website/workflows/github-pages/badge.svg)](https://xtreamwayz.netlify.app/)
 
 ## Development
 
@@ -30,27 +30,27 @@ on:
     branches:
       - master
     paths:
-    - "docs/**"
+      - 'docs/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Trigger build webhook on Netlify
-      run: curl -s -X POST "https://api.netlify.com/build_hooks/${TOKEN}"
-      env:
-        TOKEN: ${{ secrets.NETLIFY_DOCS_BUILD_HOOK }}
+      - name: Trigger build webhook on Netlify
+        run: curl -s -X POST "https://api.netlify.com/build_hooks/${TOKEN}"
+        env:
+          TOKEN: ${{ secrets.NETLIFY_DOCS_BUILD_HOOK }}
 ```
 
 ## Documentation
 
 All project documentation is located in the [./docs](./docs) folder. If you would like to contribute
 to the documentation, please submit a pull request. You can read the docs online:
-https://xtreamwayz.netlify.com/
+https://xtreamwayz.netlify.app/
 
 ## Contributing
 
-***BEFORE you start work on a feature or fix***, please read & follow the
+**_BEFORE you start work on a feature or fix_**, please read & follow the
 [contributing guidelines](https://github.com/xtreamwayz/.github/blob/master/CONTRIBUTING.md#contributing)
 to help avoid any wasted or duplicate effort.
 
