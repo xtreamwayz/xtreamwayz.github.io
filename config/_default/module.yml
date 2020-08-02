@@ -1,21 +1,17 @@
 hugoVersion:
   extended: true
-  min: "0.69.0"
+  min: '0.69.0'
 
 imports:
-  - path: "github.com/xtreamwayz/psr-container-messenger"
+  - path: 'github.com/xtreamwayz/psr-container-messenger'
     mounts:
-      - source: "docs"
-        target: "content/psr-container-messenger"
-  - path: "github.com/xtreamwayz/html-form-validator"
+      - source: 'docs'
+        target: 'content/psr-container-messenger'
+  - path: 'github.com/xtreamwayz/html-form-validator'
     mounts:
-      - source: "docs"
-        target: "content/html-form-validator"
-  - path: "github.com/xtreamwayz/devops"
+      - source: 'docs'
+        target: 'content/html-form-validator'
+  - path: 'github.com/xtreamwayz/expressive-console'
     mounts:
-      - source: "docs"
-        target: "content/devops"
-  - path: "github.com/xtreamwayz/expressive-console"
-    mounts:
-      - source: "docs"
-        target: "content/expressive-console"
+      - source: 'docs'
+        target: 'content/expressive-console'
