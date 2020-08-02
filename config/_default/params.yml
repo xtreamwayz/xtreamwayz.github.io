@@ -3,4 +3,4 @@ organization: xtreamwayz
 projects:
   - 'psr-container-messenger'
   - 'html-form-validator'
-  - 'expressive-console'
+  - 'mezzio-console'

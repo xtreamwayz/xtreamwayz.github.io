@@ -11,7 +11,7 @@ imports:
     mounts:
       - source: 'docs'
         target: 'content/html-form-validator'
-  - path: 'github.com/xtreamwayz/expressive-console'
+  - path: 'github.com/xtreamwayz/mezzio-console'
     mounts:
       - source: 'docs'
-        target: 'content/expressive-console'
+        target: 'content/mezzio-console'
