@@ -1,0 +1,116 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Customizing the InputFilter &ndash; xtreamwayz</title><link rel=stylesheet href=https://xtreamwayz.github.io/style/main.min.9a43eef00d20bcf5910d38f7ef1e59e34738fb6edf2e8b12000850ad43df15def9e6f0bc7615d203210cf6b4622507e0fc6f3a27c3530347a3f55a45055fd9db.css integrity="sha512-mkPu8A0gvPWRDTj37x5Z40c4+27fLosSAAhQrUPfFd755vC8dhXSAyEM9rRiJQfg/G86J8NTA0ej9VpFBV/Z2w==" media=screen></head><body class=app><header class="app-header navbar navbar-expand navbar-dark bg-dark text-white"><nav class="nav-container container"><a class="navbar-brand text-primary text-uppercase font-weight-bold" href=https://xtreamwayz.github.io/ aria-label="It starts with an idea">xtreamwayz</a><ul class="navbar-nav mr-auto"><li class="nav-item dropdown"><a class="nav-item nav-link dropdown-toggle mr-md-2" href=# id=bd-projects data-toggle=dropdown aria-haspopup=true aria-expanded=false>html-form-validator</a><div class="dropdown-menu dropdown-menu-right" aria-labelledby=bd-projects><a class=dropdown-item href=https://xtreamwayz.github.io/psr-container-messenger/>psr-container-messenger</a>
+<a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/>html-form-validator</a>
+<a class=dropdown-item href=https://xtreamwayz.github.io/mezzio-console/>mezzio-console</a></div></li><div class=dropdown><a class="nav-item nav-link mr-md-2 dropdown-toggle" href=# role=button id=header-html-form-validator-v1 data-toggle=dropdown aria-haspopup=true aria-expanded=false>Version v1</a><div class=dropdown-menu aria-labelledby=header-html-form-validator-v1><a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/latest/>Latest (v1)</a></div></div></ul></nav></header><main class=app-content><article class=container><header><h1>Customizing the InputFilter</h1></header><div class=d-flex><div class=flex-grow-1><nav id=TableOfContents><ul><li><a href=#setting-a-default-inputfilter-factory>Setting a default InputFilter Factory</a></li><li><a href=#re-usable-inputfilters>Re-usable InputFilters</a></li><li><a href=#custom-validators-and-filters>Custom Validators and Filters</a></li></ul></nav></div><nav class="nav flex-column nav-pills"><div class=dropdown><a class="nav-link btn btn-sm btn-primary m-1 dropdown-toggle" href=# role=button id=page-html-form-validator-v1 data-toggle=dropdown aria-haspopup=true aria-expanded=false>Version v1</a><div class=dropdown-menu aria-labelledby=page-html-form-validator-v1><a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/latest/>Latest (v1)</a></div></div><a class="nav-link btn btn-sm btn-primary m-1" href=https://github.com/xtreamwayz/html-form-validator/edit/master/docs/latest/customizing-the-inputfilter.md>Improve this page</a>
+<a class="nav-link btn btn-sm btn-primary m-1" href="https://github.com/xtreamwayz/html-form-validator/issues/new?template=bug-report.md&title=docs:%20issue%20with%20html-form-validator%2flatest%2fcustomizing-the-inputfilter.md">Report issue</a></nav></div><h2 id=setting-a-default-inputfilter-factory>Setting a default InputFilter Factory</h2><p>Sometimes you need custom filters or validators. To register those, a <code>Laminas\InputFilter\Factory</code> can be used and
+injected into the FormFactory. Or use the included <code>InputFilterFactory</code> to set this up for you from this config:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=k>return</span> <span class=o>=</span> <span class=p>[</span>
+    <span class=s1>&#39;laminas-inputfilter&#39;</span> <span class=o>=&gt;</span> <span class=p>[</span>
+        <span class=s1>&#39;validators&#39;</span> <span class=o>=&gt;</span> <span class=p>[</span>
+            <span class=c1>// Attach custom validators or override standard validators
+</span><span class=c1></span>            <span class=s1>&#39;invokables&#39;</span> <span class=o>=&gt;</span> <span class=p>[</span>
+                <span class=s1>&#39;recaptcha&#39;</span> <span class=o>=&gt;</span> <span class=nx>RecaptchaValidator</span><span class=o>::</span><span class=na>class</span><span class=p>,</span>
+            <span class=p>],</span>
+        <span class=p>],</span>
+        <span class=s1>&#39;filters&#39;</span>    <span class=o>=&gt;</span> <span class=p>[</span>
+            <span class=c1>// Attach custom filters or override standard filters
+</span><span class=c1></span>            <span class=s1>&#39;invokables&#39;</span> <span class=o>=&gt;</span> <span class=p>[],</span>
+        <span class=p>],</span>
+    <span class=p>],</span>
+<span class=p>];</span>
+</code></pre></td></tr></table></div></div><h2 id=re-usable-inputfilters>Re-usable InputFilters</h2><p>Still want to use a html form instead of generating it with complicated classes, but you want to reuse the validation
+part? We got you covered. The <code>FormFactory</code> and <code>Form</code> accepts <code>Laminas\InputFilter\InputFilterInterface</code>s so they can be
+re-used everywhere in your app. The <code>Form</code> only creates new filters and validators for named input elements that do not
+exist yet in the injected InputFilter.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=nv>$form</span> <span class=o>=</span> <span class=p>(</span><span class=k>new</span> <span class=nx>FormFactory</span><span class=p>())</span><span class=o>-&gt;</span><span class=na>fromHtml</span><span class=p>(</span><span class=nv>$htmlForm</span><span class=p>,</span> <span class=nv>$defaultValues</span><span class=p>,</span> <span class=nv>$userInputFilter</span><span class=p>);</span>
+</code></pre></td></tr></table></div></div><h2 id=custom-validators-and-filters>Custom Validators and Filters</h2><p>Setting up custom validators and filters is a bit more work but it isn&rsquo;t complicated. Instead of creating the
+FormFactory with its static <code>fromHtml</code> method, the constructor is needed with a configured <code>Laminas\InputFilter\Factory</code>
+and a <code>Psr\Container\ContainerInterface</code>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=nv>$config</span> <span class=o>=</span> <span class=p>[</span>
+    <span class=s1>&#39;laminas-inputfilter&#39;</span> <span class=o>=&gt;</span> <span class=p>[</span>
+        <span class=s1>&#39;validators&#39;</span> <span class=o>=&gt;</span> <span class=p>[</span>
+            <span class=c1>// Attach custom validators or override standard validators
+</span><span class=c1></span>            <span class=s1>&#39;invokables&#39;</span> <span class=o>=&gt;</span> <span class=p>[</span>
+                <span class=s1>&#39;recaptcha&#39;</span> <span class=o>=&gt;</span> <span class=nx>Xtreamwayz\HTMLFormValidator\Validator\RecaptchaValidator</span><span class=o>::</span><span class=na>class</span><span class=p>,</span>
+            <span class=p>],</span>
+        <span class=p>],</span>
+        <span class=s1>&#39;filters&#39;</span>    <span class=o>=&gt;</span> <span class=p>[</span>
+            <span class=c1>// Attach custom filters or override standard filters
+</span><span class=c1></span>            <span class=s1>&#39;invokables&#39;</span> <span class=o>=&gt;</span> <span class=p>[</span>
+            <span class=p>],</span>
+        <span class=p>],</span>
+    <span class=p>],</span>
+<span class=p>];</span>
+
+<span class=c1>// Create a container-interop compatible container with the custom validator configuration
+</span><span class=c1></span><span class=nv>$container</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Laminas\ServiceManager\ServiceManager</span><span class=p>(</span><span class=nv>$dependencies</span><span class=p>);</span>
+<span class=nv>$container</span><span class=o>-&gt;</span><span class=na>setService</span><span class=p>(</span><span class=s1>&#39;config&#39;</span><span class=p>,</span> <span class=nv>$config</span><span class=p>);</span>
+
+<span class=c1>// Use the InputFilterFactory to do all the work for you
+</span><span class=c1></span><span class=nv>$factory</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Xtreamwayz\HTMLFormValidator\InputFilterFactory</span><span class=p>();</span>
+<span class=nv>$inputFilterFactory</span> <span class=o>=</span> <span class=nv>$factory</span><span class=p>(</span><span class=nv>$container</span><span class=p>);</span>
+
+<span class=c1>// Load the html form into the FormFactory
+</span><span class=c1></span><span class=nv>$formFactory</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>FormFactory</span><span class=p>(</span><span class=nv>$inputFilterFactory</span><span class=p>);</span>
+
+<span class=c1>// Create a form instance
+</span><span class=c1></span><span class=nv>$form</span> <span class=o>=</span> <span class=nv>$formFactory</span><span class=o>-&gt;</span><span class=na>fromHtml</span><span class=p>(</span><span class=nv>$html</span><span class=p>);</span>
+
+<span class=c1>// Validate the form
+</span><span class=c1></span><span class=nv>$result</span> <span class=o>=</span> <span class=nv>$form</span><span class=o>-&gt;</span><span class=na>validate</span><span class=p>(</span><span class=nv>$_POST</span><span class=p>);</span>
+
+<span class=c1>// Display the plain form
+</span><span class=c1></span><span class=k>echo</span> <span class=nv>$form</span><span class=o>-&gt;</span><span class=na>asString</span><span class=p>();</span>
+
+<span class=c1>// Display the form with the submitted values and validation messages
+</span><span class=c1></span><span class=k>echo</span> <span class=nv>$form</span><span class=o>-&gt;</span><span class=na>asString</span><span class=p>(</span><span class=nv>$validationResult</span><span class=p>);</span>
+</code></pre></td></tr></table></div></div><footer class="my-5 text-muted">This page, including the code samples, is licensed under the <a href=https://creativecommons.org/licenses/by/4.0/>Creative Commons CC BY 4.0</a> license.</footer></article></main><footer class="app-footer p-3"><div class=container><p class=text-center>&copy; 2019 <a href=https://www.elt.ink/>Geert Eltink</a></p></div></footer><script src=https://code.jquery.com/jquery-3.4.1.slim.min.js integrity=sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js integrity=sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 crossorigin=anonymous></script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-151173516-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>

@@ -1,0 +1,82 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><title>API attributes &ndash; xtreamwayz</title><link rel=stylesheet href=https://xtreamwayz.github.io/style/main.min.9a43eef00d20bcf5910d38f7ef1e59e34738fb6edf2e8b12000850ad43df15def9e6f0bc7615d203210cf6b4622507e0fc6f3a27c3530347a3f55a45055fd9db.css integrity="sha512-mkPu8A0gvPWRDTj37x5Z40c4+27fLosSAAhQrUPfFd755vC8dhXSAyEM9rRiJQfg/G86J8NTA0ej9VpFBV/Z2w==" media=screen></head><body class=app><header class="app-header navbar navbar-expand navbar-dark bg-dark text-white"><nav class="nav-container container"><a class="navbar-brand text-primary text-uppercase font-weight-bold" href=https://xtreamwayz.github.io/ aria-label="It starts with an idea">xtreamwayz</a><ul class="navbar-nav mr-auto"><li class="nav-item dropdown"><a class="nav-item nav-link dropdown-toggle mr-md-2" href=# id=bd-projects data-toggle=dropdown aria-haspopup=true aria-expanded=false>html-form-validator</a><div class="dropdown-menu dropdown-menu-right" aria-labelledby=bd-projects><a class=dropdown-item href=https://xtreamwayz.github.io/psr-container-messenger/>psr-container-messenger</a>
+<a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/>html-form-validator</a>
+<a class=dropdown-item href=https://xtreamwayz.github.io/mezzio-console/>mezzio-console</a></div></li><div class=dropdown><a class="nav-item nav-link mr-md-2 dropdown-toggle" href=# role=button id=header-html-form-validator-v1 data-toggle=dropdown aria-haspopup=true aria-expanded=false>Version v1</a><div class=dropdown-menu aria-labelledby=header-html-form-validator-v1><a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/latest/>Latest (v1)</a></div></div></ul></nav></header><main class=app-content><article class=container><header><h1>API attributes</h1></header><div class=d-flex><div class=flex-grow-1><nav id=TableOfContents><ul><li><a href=#special-attributes>Special Attributes</a><ul><li><a href=#name-and-data-input-name>name and data-input-name</a></li><li><a href=#data-reuse-submitted-value>data-reuse-submitted-value</a></li><li><a href=#data-filters>data-filters</a></li><li><a href=#data-validators>data-validators</a></li><li><a href=#checked>checked</a></li><li><a href=#disabled>disabled</a></li><li><a href=#list>list</a></li><li><a href=#max>max</a></li><li><a href=#min>min</a></li><li><a href=#step>step</a></li><li><a href=#maxlength>maxlength</a></li><li><a href=#minlength>minlength</a></li><li><a href=#multiple>multiple</a></li><li><a href=#pattern>pattern</a></li><li><a href=#readonly>readonly</a></li><li><a href=#required>required</a></li><li><a href=#aria-required>aria-required</a></li></ul></li></ul></nav></div><nav class="nav flex-column nav-pills"><div class=dropdown><a class="nav-link btn btn-sm btn-primary m-1 dropdown-toggle" href=# role=button id=page-html-form-validator-v1 data-toggle=dropdown aria-haspopup=true aria-expanded=false>Version v1</a><div class=dropdown-menu aria-labelledby=page-html-form-validator-v1><a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/latest/>Latest (v1)</a></div></div><a class="nav-link btn btn-sm btn-primary m-1" href=https://github.com/xtreamwayz/html-form-validator/edit/master/docs/latest/api-attributes.md>Improve this page</a>
+<a class="nav-link btn btn-sm btn-primary m-1" href="https://github.com/xtreamwayz/html-form-validator/issues/new?template=bug-report.md&title=docs:%20issue%20with%20html-form-validator%2flatest%2fapi-attributes.md">Report issue</a></nav></div><h2 id=special-attributes>Special Attributes</h2><h3 id=name-and-data-input-name>name and data-input-name</h3><p>The name is required to link validation messages and request data.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;email&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;email_address&#34;</span> <span class=p>/&gt;</span>
+<span class=p>&lt;</span><span class=nt>div</span> <span class=na>data-input-name</span><span class=o>=</span><span class=s>&#34;email_address&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table></div></div><h3 id=data-reuse-submitted-value>data-reuse-submitted-value</h3><p>Reuse the submitted value and inject it as a value.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span>
+  <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span>
+  <span class=na>name</span><span class=o>=</span><span class=s>&#34;username&#34;</span>
+  <span class=na>data-reuse-submitted-value</span><span class=o>=</span><span class=s>&#34;true&#34;</span>
+  <span class=na>value</span><span class=o>=</span><span class=s>&#34;xtreamwayz&#34;</span>
+<span class=p>/&gt;</span>
+</code></pre></td></tr></table></div></div><h3 id=data-filters>data-filters</h3><p>Apply filters to the submitted value. Multiple
+<a href=https://docs.laminas.dev/laminas-filter/standard-filters/>standard filters</a>
+can be used, separated by a vertical bar. Options can be set with <code>{key:value,min:2,max:140}</code>.
+The attribute will be removed before rendering the form, including any sensitive options.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;username&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;&#34;</span> <span class=na>data-filters</span><span class=o>=</span><span class=s>&#34;stringtrim|alpha&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table></div></div><h3 id=data-validators>data-validators</h3><p>Add extra validators. Multiple
+<a href=https://docs.laminas.dev/laminas-validator/standard-filters/>standard validators</a>
+can be used, separated by a vertical bar. Options can be set with <code>{key:value,min:2,max:140}</code>.
+The attribute will be removed before rendering the form, including any sensitive options.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span>
+  <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span>
+  <span class=na>name</span><span class=o>=</span><span class=s>&#34;username&#34;</span>
+  <span class=na>value</span><span class=o>=</span><span class=s>&#34;&#34;</span>
+  <span class=na>data-validators</span><span class=o>=</span><span class=s>&#34;stringlength{min:2,max:140}|validator{key:val,foo:bar}|notempty&#34;</span>
+<span class=p>/&gt;</span>
+</code></pre></td></tr></table></div></div><h3 id=checked>checked</h3><p>The checked content attribute is a boolean attribute that gives the default checkedness of the input element. When the
+checked content attribute is added, if the control does not have dirty checkedness, the user agent must set the
+checkedness of the element to true; when the checked content attribute is removed, if the control does not have dirty
+checkedness, the user agent must set the checkedness of the element to false.</p><h3 id=disabled>disabled</h3><p>The disabled content attribute is a boolean attribute.</p><p>Constraint validation: If an element is disabled, it is barred from constraint validation.</p><h3 id=list>list</h3><p>The list attribute is used to identify an element that lists predefined options suggested to the user.</p><p>If present, its value must be the ID of a datalist element in the same document.</p><p>The <strong>suggestions source element</strong> is the first element in the document in tree order to have an ID equal to the value
+of the list attribute, if that element is a datalist element. If there is no list attribute, or if there is no element
+with that ID, or if the first element with that ID is not a datalist element, then there is no suggestions source
+element.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;browser&#34;</span> <span class=na>list</span><span class=o>=</span><span class=s>&#34;browsers&#34;</span> <span class=p>/&gt;</span>
+<span class=p>&lt;</span><span class=nt>datalist</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;browsers&#34;</span><span class=p>&gt;</span>
+  <span class=p>&lt;</span><span class=nt>option</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;Edge&#34;</span> <span class=p>/&gt;</span>
+  <span class=p>&lt;</span><span class=nt>option</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;Firefox&#34;</span> <span class=p>/&gt;</span>
+  <span class=p>&lt;</span><span class=nt>option</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;Chrome&#34;</span> <span class=p>/&gt;</span>
+  <span class=p>&lt;</span><span class=nt>option</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;Opera&#34;</span> <span class=p>/&gt;</span>
+  <span class=p>&lt;</span><span class=nt>option</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;Safari&#34;</span> <span class=p>/&gt;</span>
+<span class=p>&lt;/</span><span class=nt>datalist</span><span class=p>&gt;</span>
+</code></pre></td></tr></table></div></div><h3 id=max>max</h3><p>If the element has a max attribute, and the result of applying the algorithm to convert a string to a number to the
+value of the max attribute is a number, then that number is the element&rsquo;s maximum; otherwise, if the type attribute&rsquo;s
+current state defines a default maximum, then that is the maximum; otherwise, the element has no maximum.</p><h3 id=min>min</h3><p>If the element has a min attribute, and the result of applying the algorithm to convert a string to a number to the
+value of the min attribute is a number, then that number is the element&rsquo;s minimum; otherwise, if the type attribute&rsquo;s
+current state defines a default minimum, then that is the minimum; otherwise, the element has no minimum.</p><p>The min attribute also defines the step base.</p><h3 id=step>step</h3><p>The step attribute indicates the granularity that is expected (and required) of the value or values, by limiting the
+allowed values. The section that defines the type attribute&rsquo;s current state also defines the default step, the step
+scale factor, and in some cases the default step base, which are used in processing the attribute.</p><h3 id=maxlength>maxlength</h3><p>If the input element has a maximum allowed value length, then the code-unit length of the value of the element&rsquo;s
+value attribute must be equal to or less than the element&rsquo;s maximum allowed value length.</p><h3 id=minlength>minlength</h3><p>If the input element has a minimum allowed value length, then the code-unit length of the value of the element&rsquo;s
+value attribute must be equal to or more than the element&rsquo;s maximum allowed value length.</p><h3 id=multiple>multiple</h3><p>The multiple attribute is a boolean attribute that indicates whether the user is to be allowed to specify more than one
+value.</p><h3 id=pattern>pattern</h3><p>The pattern attribute specifies a regular expression against which the control&rsquo;s value, or, when the multiple attribute
+applies and is set, the control&rsquo;s values, are to be checked.</p><p>If specified, the attribute&rsquo;s value must match the JavaScript Pattern production.</p><p>If an input element has a pattern attribute specified, and the attribute&rsquo;s value, when compiled as a JavaScript regular
+expression with only the &ldquo;u&rdquo; flag specified, compiles successfully, then the resulting regular expression is the
+element&rsquo;s compiled pattern regular expression. If the element has no such attribute, or if the value doesn&rsquo;t compile
+successfully, then the element has no compiled pattern regular expression. [ECMA262]</p><h3 id=readonly>readonly</h3><p>The readonly attribute is a boolean attribute that controls whether or not the user can edit the form control. When
+specified, the element is not mutable.</p><h3 id=required>required</h3><h3 id=aria-required>aria-required</h3><p>The required attribute is a boolean attribute. When specified, the element is required.</p><p>The required attribute triggers the not empty validation.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;email&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;email_address&#34;</span> <span class=na>required</span> <span class=p>/&gt;</span>
+<span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;email&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;email_address&#34;</span> <span class=na>required</span><span class=o>=</span><span class=s>&#34;required&#34;</span> <span class=p>/&gt;</span>
+<span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;email&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;email_address&#34;</span> <span class=na>aria-required</span><span class=o>=</span><span class=s>&#34;true&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table></div></div><footer class="my-5 text-muted">This page, including the code samples, is licensed under the <a href=https://creativecommons.org/licenses/by/4.0/>Creative Commons CC BY 4.0</a> license.</footer></article></main><footer class="app-footer p-3"><div class=container><p class=text-center>&copy; 2019 <a href=https://www.elt.ink/>Geert Eltink</a></p></div></footer><script src=https://code.jquery.com/jquery-3.4.1.slim.min.js integrity=sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js integrity=sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 crossorigin=anonymous></script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-151173516-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>
