@@ -1,26 +1,44 @@
 {
-  "name": "website",
+  "name": "xtreamwayz.github.io",
   "version": "1.0.0",
   "description": "The website",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npm run lint:md && npm run lint:html:index && npm run lint:html:components && npm run lint:css",
+    "lint:md": "markdownlint {archetypes,content}/**/*.md",
+    "lint:html:index": "bootlint -d W002,W005 layouts/_default/baseof.html",
+    "lint:html:components": "bootlint -d E001,W001,W002,W003,W005 layouts/**/*.html",
+    "lint:css": "stylelint assets/**/*.{css,scss}"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xtreamwayz/website.git"
+    "url": "git+https://github.com/xtreamwayz/xtreamwayz.github.io.git"
   },
-  "author": "Geert Eltink (https://www.elt.ink/)",
+  "author": "Geert Eltink (https://geerteltink.github.io/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xtreamwayz/website/issues"
+    "url": "https://github.com/xtreamwayz/xtreamwayz.github.io/issues"
   },
-  "homepage": "https://github.com/xtreamwayz/website#readme",
+  "homepage": "https://github.com/xtreamwayz/xtreamwayz.github.io#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.14.0",
-    "autoprefixer": "^9.8.6",
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
-    "popper.js": "^1.16.1",
-    "postcss-cli": "^7.1.1"
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^9.8.6",
+    "bootlint": "^1.1.0",
+    "htmlhint": "^0.14.0",
+    "markdownlint": "^0.20.0",
+    "markdownlint-cli": "^0.23.0",
+    "postcss-cli": "^7.1.2",
+    "stylelint": "^13.7.1",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-recess-order": "^2.1.0",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^20.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
   }
 }
