@@ -17,11 +17,12 @@ jobs:
           fetch-depth: 0
 
       - name: Install dependencies
-          run: npm install
+        run: npm install
 
-      - uses: jakejarvis/hugo-build-action@master
+      - name: Build
+        uses: jakejarvis/hugo-build-action@master
           with:
-            args: --gc --minify -b https://xtreamwayz.github.io/
+            args: --gc --minify --enableGitInfo -b https://xtreamwayz.github.io/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
