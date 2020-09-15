@@ -13,8 +13,8 @@
             <nav class="nav flex-column nav-pills">
                 {{- partial "versions" (dict "context" . "idPrefix" "page" "class" "nav-link btn btn-sm btn-primary m-1") -}}
                 <a class="nav-link btn btn-sm btn-primary m-1"
-                    href="{{- partial "page-edit-url.html" (dict "project" .Params.project "file" .File.Path) -}}">
-                    Improve this page
+                    href="https://github.com/{{ site.Params.organization }}/{{ .Params.project }}">
+                    Source
                 </a>
                 <a class="nav-link btn btn-sm btn-primary m-1"
                     href="https://github.com/{{ site.Params.organization }}/{{ .Params.project }}/issues/new?template=bug-report.md&title=docs:%20issue%20with%20{{ .File.Path }}">

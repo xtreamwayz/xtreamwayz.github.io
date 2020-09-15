@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Init modules
+      - name: Init Hugo modules
         uses: jakejarvis/hugo-build-action@master
         with:
           args: mod init website
