@@ -18,9 +18,9 @@ jobs:
 
       - name: Build site
         run: |
-          docker run --rm -it --volume $(pwd):/src xtreamwayz/hugo npm install
-          docker run --rm -it --volume $(pwd):/src xtreamwayz/hugo hugo mod init website
-          docker run --rm -it --volume $(pwd):/src xtreamwayz/hugo hugo --gc --minify --enableGitInfo --environment production
+          docker run --rm --volume $(pwd):/src xtreamwayz/hugo npm install
+          docker run --rm --volume $(pwd):/src xtreamwayz/hugo hugo mod init website
+          docker run --rm --volume $(pwd):/src xtreamwayz/hugo hugo --gc --minify --enableGitInfo --environment production
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
