@@ -1,4 +1,4 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Getting started &ndash; xtreamwayz</title><link rel=stylesheet href=https://xtreamwayz.github.io/style/main.min.9a43eef00d20bcf5910d38f7ef1e59e34738fb6edf2e8b12000850ad43df15def9e6f0bc7615d203210cf6b4622507e0fc6f3a27c3530347a3f55a45055fd9db.css integrity="sha512-mkPu8A0gvPWRDTj37x5Z40c4+27fLosSAAhQrUPfFd755vC8dhXSAyEM9rRiJQfg/G86J8NTA0ej9VpFBV/Z2w==" media=screen></head><body class=app><header class="app-header navbar navbar-expand navbar-dark bg-dark text-white"><nav class="nav-container container"><a class="navbar-brand text-primary text-uppercase font-weight-bold" href=https://xtreamwayz.github.io/ aria-label="It starts with an idea">xtreamwayz</a><ul class="navbar-nav mr-auto"><li class="nav-item dropdown"><a class="nav-item nav-link dropdown-toggle mr-md-2" href=# id=bd-projects data-toggle=dropdown aria-haspopup=true aria-expanded=false>html-form-validator</a><div class="dropdown-menu dropdown-menu-right" aria-labelledby=bd-projects><a class=dropdown-item href=https://xtreamwayz.github.io/psr-container-messenger/>psr-container-messenger</a>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Getting started &ndash; xtreamwayz</title><link rel=stylesheet href=https://xtreamwayz.github.io/style/main.min.0a52350cbe438f65007ae12c50a343b651a5db553d6e9af9dba24f6387de55d98057ef21c6881e1795b54efdd39d7d46be37c3c9aab9c4f9e09263579ae836fb.css integrity="sha512-ClI1DL5Dj2UAeuEsUKNDtlGl21U9bpr526JPY4feVdmAV+8hxogeF5W1Tv3TnX1GvjfDyaq5xPngkmNXmug2+w==" media=screen></head><body class=app><header class="app-header navbar navbar-expand navbar-dark bg-dark text-white"><nav class="nav-container container"><a class="navbar-brand text-primary text-uppercase font-weight-bold" href=https://xtreamwayz.github.io/ aria-label="It starts with an idea">xtreamwayz</a><ul class="navbar-nav mr-auto"><li class="nav-item dropdown"><a class="nav-item nav-link dropdown-toggle mr-md-2" href=# id=bd-projects data-toggle=dropdown aria-haspopup=true aria-expanded=false>html-form-validator</a><div class="dropdown-menu dropdown-menu-right" aria-labelledby=bd-projects><a class=dropdown-item href=https://xtreamwayz.github.io/psr-container-messenger/>psr-container-messenger</a>
 <a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/>html-form-validator</a>
 <a class=dropdown-item href=https://xtreamwayz.github.io/mezzio-console/>mezzio-console</a></div></li><div class=dropdown><a class="nav-item nav-link mr-md-2 dropdown-toggle" href=# role=button id=header-html-form-validator-v1 data-toggle=dropdown aria-haspopup=true aria-expanded=false>Version v1</a><div class=dropdown-menu aria-labelledby=header-html-form-validator-v1><a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/latest/>Latest (v1)</a></div></div></ul></nav></header><main class=app-content><article class=container><header><h1>Getting started</h1></header><div class=d-flex><div class=flex-grow-1><nav id=TableOfContents><ul><li><a href=#installation>Installation</a></li><li><a href=#how-does-it-work>How does it work?</a><ul><li><a href=#1-build-the-form>1. Build the form</a></li><li><a href=#2-validate-the-form>2. Validate the form</a></li><li><a href=#3-process-validation-result>3. Process validation result</a></li><li><a href=#4-render-the-form>4. Render the form</a></li></ul></li><li><a href=#submit-button-detection>Submit button detection</a></li><li><a href=#example>Example</a></li></ul></nav></div><nav class="nav flex-column nav-pills"><div class=dropdown><a class="nav-link btn btn-sm btn-primary m-1 dropdown-toggle" href=# role=button id=page-html-form-validator-v1 data-toggle=dropdown aria-haspopup=true aria-expanded=false>Version v1</a><div class=dropdown-menu aria-labelledby=page-html-form-validator-v1><a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/latest/>Latest (v1)</a></div></div><a class="nav-link btn btn-sm btn-primary m-1" href=https://github.com/xtreamwayz/html-form-validator>Source</a>
 <a class="nav-link btn btn-sm btn-primary m-1" href="https://github.com/xtreamwayz/html-form-validator/issues/new?template=bug-report.md&title=docs:%20issue%20with%20html-form-validator%2flatest%2f_index.md">Report issue</a></nav></div><p>As challenged by a <a href=https://twitter.com/Ocramius/status/680817040429592576>tweet</a>, this library extracts validation
@@ -11,21 +11,21 @@ rules and filters in one place.</p><h2 id=installation>Installation</h2><div cla
 factory from a html form and optionally default values. Only the first
 <code>&lt;form>&lt;/form></code> element is processed. Following form elements or html code
 outside the first form element is ignored.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=nv>$form</span> <span class=o>=</span> <span class=p>(</span><span class=k>new</span> <span class=nx>FormFactory</span><span class=p>())</span><span class=o>-&gt;</span><span class=na>fromHtml</span><span class=p>(</span><span class=nv>$htmlForm</span><span class=p>,</span> <span class=nv>$defaultValues</span><span class=p>);</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php>$form = (new FormFactory())-&gt;fromHtml($htmlForm, $defaultValues);
 </code></pre></td></tr></table></div></div><ul><li>The FormFactory creates and returns a Form instance with a new <code>Laminas\InputFilter\Factory</code> and
 <code>Laminas\InputFilter\InputFilter</code>.</li><li>The Form automatically creates default validators and filters for all input elements.</li><li>The Form extracts additional custom validation rules and filters from the form.</li><li>The Form optionally injects default data into the form input elements.</li></ul><h3 id=2-validate-the-form>2. Validate the form</h3><p>The easiest way is to use a framework that uses <a href=http://www.php-fig.org/psr/psr-7/>PSR-7 requests</a>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=c1>// Validate PSR-7 request and return a ValidationResponseInterface
-</span><span class=c1>// It should only start validation if it was a post and if there are submitted values
-</span><span class=c1></span><span class=nv>$validationResult</span> <span class=o>=</span> <span class=nv>$form</span><span class=o>-&gt;</span><span class=na>validateRequest</span><span class=p>(</span><span class=nv>$request</span><span class=p>);</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php>// Validate PSR-7 request and return a ValidationResponseInterface
+// It should only start validation if it was a post and if there are submitted values
+$validationResult = $form-&gt;validateRequest($request);
 </code></pre></td></tr></table></div></div><p>Under the hood it uses <a href=https://docs.laminas.dev/laminas-inputfilter/>laminas-inputfilter</a>
 which makes all its <a href=https://docs.laminas.dev/laminas-validator/set/>validators</a> and
 <a href=https://docs.laminas.dev/laminas-filter/standard-filters/>filters</a> available to you.</p><p>If you use a framework that doesn&rsquo;t handle PSR-7 requests, you can still reduce boilerplate
 code by passing the request method yourself:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=nv>$validationResult</span> <span class=o>=</span> <span class=nv>$form</span><span class=o>-&gt;</span><span class=na>validate</span><span class=p>(</span><span class=nv>$submittedData</span><span class=p>,</span> <span class=nv>$_SERVER</span><span class=p>[</span><span class=s1>&#39;REQUEST_METHOD&#39;</span><span class=p>]);</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php>$validationResult = $form-&gt;validate($submittedData, $_SERVER[&#39;REQUEST_METHOD&#39;]);
 </code></pre></td></tr></table></div></div><p>You can also leave the method validation out. It won&rsquo;t check for a valid <code>POST</code> method.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=nv>$validationResult</span> <span class=o>=</span> <span class=nv>$form</span><span class=o>-&gt;</span><span class=na>validate</span><span class=p>(</span><span class=nv>$submittedData</span><span class=p>);</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php>$validationResult = $form-&gt;validate($submittedData);
 </code></pre></td></tr></table></div></div><h3 id=3-process-validation-result>3. Process validation result</h3><p>Submitted data should be valid if it was a post and there are no validation messages set.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
@@ -35,32 +35,32 @@ code by passing the request method yourself:</p><div class=highlight><div class=
 </span><span class=lnt>7
 </span><span class=lnt>8
 </span><span class=lnt>9
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=c1>// It should be valid if it was a post and if there are no validation messages
-</span><span class=c1></span><span class=k>if</span> <span class=p>(</span><span class=nv>$validationResult</span><span class=o>-&gt;</span><span class=na>isValid</span><span class=p>())</span> <span class=p>{</span>
-    <span class=c1>// Get filter submitted values
-</span><span class=c1></span>    <span class=nv>$data</span> <span class=o>=</span> <span class=nv>$validationResult</span><span class=o>-&gt;</span><span class=na>getValues</span><span class=p>();</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php>// It should be valid if it was a post and if there are no validation messages
+if ($validationResult-&gt;isValid()) {
+    // Get filter submitted values
+    $data = $validationResult-&gt;getValues();
 
-    <span class=c1>// Process data
-</span><span class=c1></span>
-    <span class=k>return</span> <span class=k>new</span> <span class=nx>RedirectResponse</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>);</span>
-<span class=p>}</span>
+    // Process data
+
+    return new RedirectResponse(&#39;/&#39;);
+}
 </code></pre></td></tr></table></div></div><p>If PSR-7 request methods are not available, you might can check for a valid
 post method yourself.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=k>if</span> <span class=p>(</span><span class=nv>$_SERVER</span><span class=p>[</span><span class=s1>&#39;REQUEST_METHOD&#39;</span><span class=p>]</span> <span class=o>==</span> <span class=s1>&#39;POST&#39;</span> <span class=o>&amp;&amp;</span> <span class=nv>$validationResult</span><span class=o>-&gt;</span><span class=na>isValid</span><span class=p>())</span> <span class=p>{</span>
-    <span class=c1>// ...
-</span><span class=c1></span><span class=p>}</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php>if ($_SERVER[&#39;REQUEST_METHOD&#39;] == &#39;POST&#39; <span class=err>&amp;&amp;</span> $validationResult-&gt;isValid()) {
+    // ...
+}
 </code></pre></td></tr></table></div></div><h3 id=4-render-the-form>4. Render the form</h3><p>Last step is rendering the form and injecting the submitted values and validation messages.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=c1>// Render the form
-</span><span class=c1></span><span class=k>return</span> <span class=k>new</span> <span class=nx>HtmlResponse</span><span class=p>(</span><span class=nv>$this</span><span class=o>-&gt;</span><span class=na>template</span><span class=o>-&gt;</span><span class=na>render</span><span class=p>(</span><span class=s1>&#39;app::edit&#39;</span><span class=p>,</span> <span class=p>[</span>
-    <span class=s1>&#39;form&#39;</span> <span class=o>=&gt;</span> <span class=nv>$form</span><span class=o>-&gt;</span><span class=na>asString</span><span class=p>(</span><span class=nv>$validationResult</span><span class=p>),</span>
-<span class=p>]));</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php>// Render the form
+return new HtmlResponse($this-&gt;template-&gt;render(&#39;app::edit&#39;, [
+    &#39;form&#39; =&gt; $form-&gt;asString($validationResult),
+]));
 </code></pre></td></tr></table></div></div><p>If you don&rsquo;t want the values and messages injected for you, just leave out the validation result.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=k>echo</span> <span class=nv>$form</span><span class=o>-&gt;</span><span class=na>asString</span><span class=p>();</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php>echo $form-&gt;asString();
 </code></pre></td></tr></table></div></div><p>Before rendering, the FormFactory removes any data validation attributes used to instantiate custom validation
 (e.g. <code>data-validators</code>, <code>data-filters</code>). This also removes possible sensitive data that was used to setup
 the validators.</p><p>The <code>$validationResult</code> is optional and triggers the following tasks:</p><ul><li>The FormFactory injects filtered submitted data into the input elements.</li><li>The FormFactory adds error messages next to the input elements.</li><li>The FormFactory sets the <code>aria-invalid="true"</code> attribute for invalid input elements.</li><li>The FormFactory adds the bootstrap <code>has-danger</code> css class to the parent element.</li></ul><h2 id=submit-button-detection>Submit button detection</h2><p>Who doesn&rsquo;t want to know which button is clicked? For this to work the submit button must have a name attribute set.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
@@ -73,12 +73,12 @@ the validators.</p><p>The <code>$validationResult</code> is optional and trigger
 <span class=p>&lt;/</span><span class=nt>form</span><span class=p>&gt;</span>
 </code></pre></td></tr></table></div></div><p>You can check by the button name attribute if a specific button is clicked.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=c1>// Returns a boolean
-</span><span class=c1></span><span class=nv>$validationResult</span><span class=o>-&gt;</span><span class=na>isClicked</span><span class=p>(</span><span class=s1>&#39;confirm&#39;</span><span class=p>);</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php>// Returns a boolean
+$validationResult-&gt;isClicked(&#39;confirm&#39;);
 </code></pre></td></tr></table></div></div><p>Or get the name of the clicked button.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=c1>// Returns the name of the clicked button or null if no named was clicked
-</span><span class=c1></span><span class=nv>$validationResult</span><span class=o>-&gt;</span><span class=na>getClicked</span><span class=p>();</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php>// Returns the name of the clicked button or null if no named was clicked
+$validationResult-&gt;getClicked();
 </code></pre></td></tr></table></div></div><h2 id=example>Example</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
@@ -144,69 +144,69 @@ the validators.</p><p>The <code>$validationResult</code> is optional and trigger
 </span><span class=lnt>63
 </span><span class=lnt>64
 </span><span class=lnt>65
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=c1>// Basic contact form
-</span><span class=c1></span>
-<span class=nv>$htmlForm</span> <span class=o>=</span> <span class=s>&lt;&lt;&lt;&#39;</span><span class=dl>HTML</span><span class=s>&#39;
-</span><span class=s>&lt;form action=&#34;{{ path() }}&#34; method=&#34;post&#34;&gt;
-</span><span class=s>    &lt;div class=&#34;row&#34;&gt;
-</span><span class=s>        &lt;div class=&#34;col-md-6&#34;&gt;
-</span><span class=s>            &lt;div class=&#34;form-group&#34;&gt;
-</span><span class=s>                &lt;label class=&#34;form-control-label&#34; for=&#34;name&#34;&gt;Name&lt;/label&gt;
-</span><span class=s>                &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; placeholder=&#34;Your name&#34; required
-</span><span class=s>                       data-reuse-submitted-value=&#34;true&#34; data-filters=&#34;striptags|stringtrim&#34;
-</span><span class=s>                       class=&#34;form-control&#34; /&gt;
-</span><span class=s>            &lt;/div&gt;
-</span><span class=s>        &lt;/div&gt;
-</span><span class=s>        &lt;div class=&#34;col-md-6&#34;&gt;
-</span><span class=s>            &lt;div class=&#34;form-group&#34;&gt;
-</span><span class=s>                &lt;label class=&#34;form-control-label&#34; for=&#34;email&#34;&gt;Email address&lt;/label&gt;
-</span><span class=s>                &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; placeholder=&#34;Your email address&#34; required
-</span><span class=s>                       data-reuse-submitted-value=&#34;true&#34; data-filters=&#34;striptags|stringtrim&#34;
-</span><span class=s>                       class=&#34;form-control&#34; /&gt;
-</span><span class=s>            &lt;/div&gt;
-</span><span class=s>        &lt;/div&gt;
-</span><span class=s>    &lt;/div&gt;
-</span><span class=s>
-</span><span class=s>    &lt;div class=&#34;form-group&#34;&gt;
-</span><span class=s>        &lt;label class=&#34;form-control-label&#34; for=&#34;subject&#34;&gt;Subject&lt;/label&gt;
-</span><span class=s>        &lt;input type=&#34;text&#34; id=&#34;subject&#34; name=&#34;subject&#34; placeholder=&#34;Subject&#34; required
-</span><span class=s>               data-reuse-submitted-value=&#34;true&#34; data-filters=&#34;striptags|stringtrim&#34;
-</span><span class=s>               class=&#34;form-control&#34; /&gt;
-</span><span class=s>    &lt;/div&gt;
-</span><span class=s>
-</span><span class=s>    &lt;div class=&#34;form-group&#34;&gt;
-</span><span class=s>        &lt;label class=&#34;form-control-label&#34; for=&#34;body&#34;&gt;Message&lt;/label&gt;
-</span><span class=s>        &lt;textarea id=&#34;body&#34; name=&#34;body&#34; rows=&#34;5&#34; required
-</span><span class=s>                  data-reuse-submitted-value=&#34;true&#34; data-filters=&#34;stringtrim&#34;
-</span><span class=s>                  class=&#34;form-control&#34; placeholder=&#34;Message&#34;&gt;&lt;/textarea&gt;
-</span><span class=s>    &lt;/div&gt;
-</span><span class=s>
-</span><span class=s>    &lt;input type=&#34;hidden&#34; name=&#34;token&#34; value=&#34;{{ csrf-token }}&#34;
-</span><span class=s>           data-validators=&#34;identical{token:{{ csrf-token }}}&#34; required /&gt;
-</span><span class=s>
-</span><span class=s>    &lt;button type=&#34;submit&#34; class=&#34;btn btn-primary&#34;&gt;Submit&lt;/button&gt;
-</span><span class=s>&lt;/form&gt;
-</span><span class=s></span><span class=dl>HTML</span><span class=p>;</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php>// Basic contact form
 
-<span class=c1>// Create form validator from a twig rendered form template
-</span><span class=c1></span><span class=nv>$form</span> <span class=o>=</span> <span class=p>(</span><span class=k>new</span> <span class=nx>FormFactory</span><span class=p>())</span><span class=o>-&gt;</span><span class=na>fromHtml</span><span class=p>(</span><span class=nv>$template</span><span class=o>-&gt;</span><span class=na>render</span><span class=p>(</span><span class=nv>$htmlForm</span><span class=p>,</span> <span class=p>[</span>
-    <span class=s1>&#39;csrf-token&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;123456&#39;</span>
-<span class=p>]));</span>
+$htmlForm = <span class=err>&lt;&lt;&lt;</span>&#39;HTML&#39;
+<span class=p>&lt;</span><span class=nt>form</span> <span class=na>action</span><span class=o>=</span><span class=s>&#34;{{ path() }}&#34;</span> <span class=na>method</span><span class=o>=</span><span class=s>&#34;post&#34;</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;row&#34;</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;col-md-6&#34;</span><span class=p>&gt;</span>
+            <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-group&#34;</span><span class=p>&gt;</span>
+                <span class=p>&lt;</span><span class=nt>label</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-control-label&#34;</span> <span class=na>for</span><span class=o>=</span><span class=s>&#34;name&#34;</span><span class=p>&gt;</span>Name<span class=p>&lt;/</span><span class=nt>label</span><span class=p>&gt;</span>
+                <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;name&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;name&#34;</span> <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;Your name&#34;</span> <span class=na>required</span>
+                       <span class=na>data-reuse-submitted-value</span><span class=o>=</span><span class=s>&#34;true&#34;</span> <span class=na>data-filters</span><span class=o>=</span><span class=s>&#34;striptags|stringtrim&#34;</span>
+                       <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-control&#34;</span> <span class=p>/&gt;</span>
+            <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+        <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;col-md-6&#34;</span><span class=p>&gt;</span>
+            <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-group&#34;</span><span class=p>&gt;</span>
+                <span class=p>&lt;</span><span class=nt>label</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-control-label&#34;</span> <span class=na>for</span><span class=o>=</span><span class=s>&#34;email&#34;</span><span class=p>&gt;</span>Email address<span class=p>&lt;/</span><span class=nt>label</span><span class=p>&gt;</span>
+                <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;email&#34;</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;email&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;email&#34;</span> <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;Your email address&#34;</span> <span class=na>required</span>
+                       <span class=na>data-reuse-submitted-value</span><span class=o>=</span><span class=s>&#34;true&#34;</span> <span class=na>data-filters</span><span class=o>=</span><span class=s>&#34;striptags|stringtrim&#34;</span>
+                       <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-control&#34;</span> <span class=p>/&gt;</span>
+            <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+        <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
 
-<span class=nv>$_POST</span><span class=p>[</span><span class=s1>&#39;name&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=s1>&#39;Barney Stinsons&#39;</span><span class=p>;</span>
-<span class=nv>$_POST</span><span class=p>[</span><span class=s1>&#39;email&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=s1>&#39;barney.stinsons@example.com&#39;</span><span class=p>;</span>
-<span class=nv>$_POST</span><span class=p>[</span><span class=s1>&#39;subject&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=s1>&#39;Hi&#39;</span><span class=p>;</span>
-<span class=nv>$_POST</span><span class=p>[</span><span class=s1>&#39;body&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=s1>&#39;It is going to be Legen-Wait For It... DARY! LEGENDARY!&#39;</span><span class=p>;</span>
+    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-group&#34;</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>label</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-control-label&#34;</span> <span class=na>for</span><span class=o>=</span><span class=s>&#34;subject&#34;</span><span class=p>&gt;</span>Subject<span class=p>&lt;/</span><span class=nt>label</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;subject&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;subject&#34;</span> <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;Subject&#34;</span> <span class=na>required</span>
+               <span class=na>data-reuse-submitted-value</span><span class=o>=</span><span class=s>&#34;true&#34;</span> <span class=na>data-filters</span><span class=o>=</span><span class=s>&#34;striptags|stringtrim&#34;</span>
+               <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-control&#34;</span> <span class=p>/&gt;</span>
+    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
 
-<span class=c1>// Validate form and return form validation result object
-</span><span class=c1></span><span class=nv>$result</span> <span class=o>=</span> <span class=nv>$form</span><span class=o>-&gt;</span><span class=na>validate</span><span class=p>(</span><span class=nv>$_POST</span><span class=p>);</span>
+    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-group&#34;</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>label</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-control-label&#34;</span> <span class=na>for</span><span class=o>=</span><span class=s>&#34;body&#34;</span><span class=p>&gt;</span>Message<span class=p>&lt;/</span><span class=nt>label</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>textarea</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;body&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;body&#34;</span> <span class=na>rows</span><span class=o>=</span><span class=s>&#34;5&#34;</span> <span class=na>required</span>
+                  <span class=na>data-reuse-submitted-value</span><span class=o>=</span><span class=s>&#34;true&#34;</span> <span class=na>data-filters</span><span class=o>=</span><span class=s>&#34;stringtrim&#34;</span>
+                  <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-control&#34;</span> <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;Message&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>textarea</span><span class=p>&gt;</span>
+    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
 
-<span class=c1>// Check validation result
-</span><span class=c1></span><span class=k>if</span> <span class=p>(</span><span class=nv>$result</span><span class=o>-&gt;</span><span class=na>isValid</span><span class=p>())</span> <span class=p>{</span>
-    <span class=nv>$data</span> <span class=o>=</span> <span class=nv>$result</span><span class=o>-&gt;</span><span class=na>getValues</span><span class=p>();</span>
-    <span class=c1>// Process data ...
-</span><span class=c1></span><span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-    <span class=c1>// Inject error messages and filtered values from the result object
-</span><span class=c1></span>    <span class=k>echo</span> <span class=nv>$form</span><span class=o>-&gt;</span><span class=na>asString</span><span class=p>(</span><span class=nv>$result</span><span class=p>);</span>
-<span class=p>}</span>
+    <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;hidden&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;token&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;{{ csrf-token }}&#34;</span>
+           <span class=na>data-validators</span><span class=o>=</span><span class=s>&#34;identical{token:{{ csrf-token }}}&#34;</span> <span class=na>required</span> <span class=p>/&gt;</span>
+
+    <span class=p>&lt;</span><span class=nt>button</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;submit&#34;</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;btn btn-primary&#34;</span><span class=p>&gt;</span>Submit<span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>form</span><span class=p>&gt;</span>
+HTML;
+
+// Create form validator from a twig rendered form template
+$form = (new FormFactory())-&gt;fromHtml($template-&gt;render($htmlForm, [
+    &#39;csrf-token&#39; =&gt; &#39;123456&#39;
+]));
+
+$_POST[&#39;name&#39;] = &#39;Barney Stinsons&#39;;
+$_POST[&#39;email&#39;] = &#39;barney.stinsons@example.com&#39;;
+$_POST[&#39;subject&#39;] = &#39;Hi&#39;;
+$_POST[&#39;body&#39;] = &#39;It is going to be Legen-Wait For It... DARY! LEGENDARY!&#39;;
+
+// Validate form and return form validation result object
+$result = $form-&gt;validate($_POST);
+
+// Check validation result
+if ($result-&gt;isValid()) {
+    $data = $result-&gt;getValues();
+    // Process data ...
+} else {
+    // Inject error messages and filtered values from the result object
+    echo $form-&gt;asString($result);
+}
 </code></pre></td></tr></table></div></div><footer class="my-5 text-muted">This page, including the code samples, is licensed under the <a href=https://creativecommons.org/licenses/by/4.0/>Creative Commons CC BY 4.0</a> license.</footer></article></main><footer class="app-footer p-3"><div class=container><p class=text-center>&copy; 2016-2020 <a href=https://geerteltink.github.io/>Geert Eltink</a></p></div></footer><script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js integrity=sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV crossorigin=anonymous></script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-151173516-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>
