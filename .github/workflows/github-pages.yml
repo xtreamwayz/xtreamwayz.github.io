@@ -16,11 +16,14 @@ jobs:
           submodules: true
           fetch-depth: 0
 
+      - name: Install dependencies
+        run: docker run --rm --volume $(pwd):/src xtreamwayz/hugo npm install
+
+      - name: Init modules
+        run: docker run --rm --volume $(pwd):/src xtreamwayz/hugo hugo mod init site
+
       - name: Build site
-        run: |
-          docker run --rm --volume $(pwd):/src xtreamwayz/hugo npm install
-          docker run --rm --volume $(pwd):/src xtreamwayz/hugo hugo mod init website
-          docker run --rm --volume $(pwd):/src xtreamwayz/hugo hugo --gc --minify --enableGitInfo --environment production
+        run: docker run --rm --volume $(pwd):/src xtreamwayz/hugo hugo --gc --minify --enableGitInfo --environment production
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
