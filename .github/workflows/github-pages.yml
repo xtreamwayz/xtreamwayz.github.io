@@ -16,18 +16,11 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Init Hugo modules
-        uses: jakejarvis/hugo-build-action@master
-        with:
-          args: mod init website
-
       - name: Build site
-        uses: jakejarvis/hugo-build-action@master
-        with:
-          args: --gc --minify --enableGitInfo -b https://xtreamwayz.github.io/
+        run: |
+          docker run --rm -it --volume $(pwd):/src xtreamwayz/hugo npm install
+          docker run --rm -it --volume $(pwd):/src xtreamwayz/hugo hugo mod init website
+          docker run --rm -it --volume $(pwd):/src xtreamwayz/hugo hugo --gc --minify --enableGitInfo --environment production
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
