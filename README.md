@@ -5,8 +5,15 @@
 ## Development
 
 ```bash
-hugo mod init website
-hugo server
+# init
+docker run --rm --volume $(pwd):/src xtreamwayz/hugo npm install
+docker run --rm --volume $(pwd):/src xtreamwayz/hugo hugo mod init site
+
+# server
+docker-compose up -d
+
+# build
+docker run --rm --volume $(pwd):/src xtreamwayz/hugo hugo --gc --minify --enableGitInfo --environment production
 ```
 
 For local development of package documentation, add one of these to `go.mod`
