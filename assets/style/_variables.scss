@@ -1,91 +1,83 @@
+// Darkly 4.5.2
+// Bootswatch
+
+//
 // Color system
+//
 
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
+$gray-200: #ebebeb !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
-$gray-800: #373a3c !default;
-$gray-900: #212529 !default;
+$gray-600: #888 !default;
+$gray-700: #444 !default;
+$gray-800: #303030 !default;
+$gray-900: #1d1d1d !default;
 $black:    #000 !default;
 
-$red:           #f44336 !default;
-$pink:          #e91e63 !default;
-$purple:        #9c27b0 !default;
-$deep-purple:   #673ab7 !default;
-$indigo:        #3f51b5 !default;
-$blue:          #2196f3 !default;
-$light-blue:    #03a9f4 !default;
-$cyan:          #00bcd4 !default;
-$teal:          #009688 !default;
-$green:         #4caf50 !default;
-$light-green:   #8bc34a !default;
-$lime:          #cddc39 !default;
-$yellow:        #ffeb3b !default;
-$amber:         #ffc107 !default;
-$orange:        #ff9800 !default;
-$deep-orange:   #ff5722 !default;
-$brown:         #795548 !default;
-$grey:          #9e9e9e !default;
-$blue-grey:     #607d8b !default;
+$blue:    #375a7f !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #e74c3c !default;
+$orange:  #fd7e14 !default;
+$yellow:  #f39c12 !default;
+$green:   #00bc8c !default;
+$teal:    #20c997 !default;
+$cyan:    #3498db !default;
 
+$primary:       #4450de !default;
+$secondary:     #4d4772 !default;
 $success:       $green !default;
 $info:          $cyan !default;
-$warning:       $orange !default;
+$warning:       $yellow !default;
 $danger:        $red !default;
+$light:         $gray-500 !default;
+$dark:          #2c2c2c !default;
 
-$body-bg:       #121212;
-$body-color:    #ffffff;
-$primary:       #ff4f00;
-$secondary:     #006ec7;
-$dark:          #1e1e1e;
-$light:         #454545;
+$yiq-contrasted-threshold:  175 !default;
 
-// Options
+// Body
 
-$enable-rounded: false !default;
-
-// Theme colors to try out
-
-$body-bg:       #0b0732;
-$primary:       #ff4f00;
-$secondary:     #4450de;
-$dark:          #232046;
-$light:         #4d4772;
+$body-bg:       #1d1d1d !default;
+$body-color:    #f5f5f5 !default;
 
 // Links
 
-$link-color:    $primary;
+$link-color:    $light !default;
 
 // Fonts
 
-//$font-family-sans-serif: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif !default;
-$headings-font-weight:   600 !default;
+$font-family-sans-serif:            "Lato", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$font-size-base:                    1.1rem !default;
+
+$h1-font-size:                      3rem !default;
+$h2-font-size:                      2.5rem !default;
+$h3-font-size:                      2rem !default;
+
+$text-muted:                        $gray-600 !default;
 
 // Tables
 
-$table-accent-bg:             $dark !default;
-$table-border-color:          lighten($dark, 10%) !default;
-$table-bg-level:              0 !default;
-$table-border-level:          -2 !default;
+$table-accent-bg:                   $gray-800 !default;
+$table-border-color:                $gray-700 !default;
 
 // Forms
 
-$input-border-color:        transparent !default;
-$input-group-addon-color:   $gray-500 !default;
-$input-group-addon-bg:      $gray-700 !default;
-$custom-file-color:         $gray-500 !default;
-$custom-file-border-color:  $gray-700 !default;
+$input-border-color:                $body-bg !default;
+$input-group-addon-color:           $gray-500 !default;
+$input-group-addon-bg:              $gray-700 !default;
+$custom-file-color:                 $gray-500 !default;
+$custom-file-border-color:          $body-bg !default;
 
 // Dropdowns
 
-$dropdown-bg:                       $dark !default;
-$dropdown-border-color:             lighten($dark, 10%) !default;
-$dropdown-divider-bg:               lighten($dark, 10%) !default;
-
+$dropdown-bg:                       $gray-900 !default;
+$dropdown-border-color:             $gray-700 !default;
+$dropdown-divider-bg:               $gray-700 !default;
 $dropdown-link-color:               $white !default;
 $dropdown-link-hover-color:         $white !default;
 $dropdown-link-hover-bg:            $primary !default;
@@ -93,9 +85,8 @@ $dropdown-link-hover-bg:            $primary !default;
 // Navs
 
 $nav-link-padding-x:                2rem !default;
-$nav-link-disabled-color:           $light !default;
-
-$nav-tabs-border-color:             lighten($dark, 10%) !default;
+$nav-link-disabled-color:           $gray-500 !default;
+$nav-tabs-border-color:             $gray-700 !default;
 $nav-tabs-link-hover-border-color:  $nav-tabs-border-color $nav-tabs-border-color transparent !default;
 $nav-tabs-link-active-color:        $white !default;
 $nav-tabs-link-active-border-color: $nav-tabs-border-color $nav-tabs-border-color transparent !default;
@@ -103,58 +94,66 @@ $nav-tabs-link-active-border-color: $nav-tabs-border-color $nav-tabs-border-colo
 // Navbar
 
 $navbar-padding-y:                  1rem !default;
-
-$navbar-dark-color:                 rgba($white,.6) !default;
+$navbar-dark-color:                 rgba($white, 0.6) !default;
 $navbar-dark-hover-color:           $white !default;
-
-$navbar-light-color:                $white !default;
-$navbar-light-hover-color:          $success !default;
-$navbar-light-active-color:         $white !default;
-$navbar-light-disabled-color:       rgba($white,.3) !default;
-$navbar-light-toggler-border-color: rgba($white,.1) !default;
+$navbar-light-color:                rgba($gray-900, 0.7) !default;
+$navbar-light-hover-color:          $gray-900 !default;
+$navbar-light-active-color:         $gray-900 !default;
+$navbar-light-toggler-border-color: rgba($gray-900, 0.1) !default;
 
 // Pagination
 
 $pagination-color:                  $white !default;
-$pagination-bg:                     $dark !default;
+$pagination-bg:                     $success !default;
 $pagination-border-width:           0 !default;
 $pagination-border-color:           transparent !default;
-
 $pagination-hover-color:            $white !default;
-$pagination-hover-bg:               lighten($dark, 10%) !default;
+$pagination-hover-bg:               lighten($success, 10%) !default;
 $pagination-hover-border-color:     transparent !default;
-
-$pagination-active-bg:              $light !default;
+$pagination-active-bg:              $pagination-hover-bg !default;
 $pagination-active-border-color:    transparent !default;
-
 $pagination-disabled-color:         $white !default;
-$pagination-disabled-bg:            darken($light, 15%) !default;
+$pagination-disabled-bg:            darken($success, 15%) !default;
 $pagination-disabled-border-color:  transparent !default;
 
 // Jumbotron
 
-$jumbotron-bg:                      $dark !default;
+$jumbotron-bg:                      $gray-800 !default;
 
 // Cards
 
-$card-cap-bg:                       lighten($dark, 10%) !default;
-$card-bg:                           $dark !default;
+$card-cap-bg:                       $gray-700 !default;
+$card-bg:                           $gray-800 !default;
 
-// Alerts
+// Popovers
 
-$alert-bg-level:                    0 !default;
-$alert-border-level:                -2 !default;
-$alert-color-level:                 -10 !default;
+$popover-bg:                        $gray-800 !default;
+$popover-header-bg:                 $gray-700 !default;
+
+// Toasts
+
+$toast-background-color:            $gray-700 !default;
+$toast-header-background-color:     $gray-800 !default;
+
+// Modals
+
+$modal-content-bg:                  $gray-800 !default;
+$modal-content-border-color:        $gray-700 !default;
+$modal-header-border-color:         $gray-700 !default;
+
+// Progress bars
+
+$progress-bg:                       $gray-700 !default;
 
 // List group
 
-$list-group-bg:                     $dark !default;
-$list-group-border-color:           lighten($dark, 10%) !default;
-$list-group-hover-bg:               lighten($dark, 10%) !default;
+$list-group-bg:                     $gray-800 !default;
+$list-group-border-color:           $gray-700 !default;
+$list-group-hover-bg:               $gray-700 !default;
 
 // Breadcrumbs
 
-$breadcrumb-bg:                     $dark !default;
+$breadcrumb-bg:                     $gray-700 !default;
 
 // Close
 
@@ -163,8 +162,4 @@ $close-text-shadow:                 none !default;
 
 // Code
 
-$kbd-color:                         $white !default;
-$kbd-bg:                            $dark !default;
-
-$pre-color:                         darken($body-color, 40%) !default;
-$code-color:                        darken($body-color, 40%) !default;
+$pre-color:                         inherit !default;
