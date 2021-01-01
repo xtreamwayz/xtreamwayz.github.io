@@ -31,7 +31,7 @@
     "bootlint": "^1.1.0",
     "htmlhint": "^0.14.0",
     "markdownlint": "^0.20.0",
-    "markdownlint-cli": "^0.23.0",
+    "markdownlint-cli": "^0.26.0",
     "postcss-cli": "^7.1.2",
     "stylelint": "^13.7.1",
     "stylelint-config-idiomatic-order": "^8.1.0",
