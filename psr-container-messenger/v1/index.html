@@ -1,4 +1,4 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Getting started &ndash; xtreamwayz</title><link rel=stylesheet href=https://xtreamwayz.github.io/style/main.min.c89d726352cedd2d21e721f8e6e087771782d2d3d6ea08705566aab898da61909e28ad95ce21481287016df2b644ac9565e3cbc971be07e03861b381ec8e6da8.css integrity="sha512-yJ1yY1LO3S0h5yH45uCHdxeC0tPW6ghwVWaquJjaYZCeKK2VziFIEocBbfK2RKyVZePLyXG+B+A4YbOB7I5tqA==" media=screen></head><body class=app><header class="app-header navbar navbar-expand navbar-dark bg-dark text-white"><nav class="nav-container container"><a class="navbar-brand text-primary text-uppercase font-weight-bold" href=https://xtreamwayz.github.io/ aria-label="It starts with an idea">xtreamwayz</a><ul class="navbar-nav mr-auto"><li class="nav-item dropdown"><a class="nav-item nav-link dropdown-toggle mr-md-2" href=# id=bd-projects data-toggle=dropdown aria-haspopup=true aria-expanded=false>psr-container-messenger</a><div class="dropdown-menu dropdown-menu-right" aria-labelledby=bd-projects><a class=dropdown-item href=https://xtreamwayz.github.io/psr-container-messenger/>psr-container-messenger</a>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Getting started &ndash; xtreamwayz</title><link rel=stylesheet href=https://xtreamwayz.github.io/style/main.min.c8e4edd3c087b2f7e311bd5a2b9ebc4ad3358a99b5b8ac7fdf707532df88160a7f0e973ccc581303d34d3f893de3531c3d2b01187447f6b26a1b6be92aacde51.css integrity="sha512-yOTt08CHsvfjEb1aK568StM1ipm1uKx/33B1Mt+IFgp/Dpc8zFgTA9NNP4k941McPSsBGHRH9rJqG2vpKqzeUQ==" media=screen></head><body class=app><header class="app-header navbar navbar-expand navbar-dark bg-dark text-white"><nav class="nav-container container"><a class="navbar-brand text-primary text-uppercase font-weight-bold" href=https://xtreamwayz.github.io/ aria-label="It starts with an idea">xtreamwayz</a><ul class="navbar-nav mr-auto"><li class="nav-item dropdown"><a class="nav-item nav-link dropdown-toggle mr-md-2" href=# id=bd-projects data-toggle=dropdown aria-haspopup=true aria-expanded=false>psr-container-messenger</a><div class="dropdown-menu dropdown-menu-right" aria-labelledby=bd-projects><a class=dropdown-item href=https://xtreamwayz.github.io/psr-container-messenger/>psr-container-messenger</a>
 <a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/>html-form-validator</a>
 <a class=dropdown-item href=https://xtreamwayz.github.io/mezzio-console/>mezzio-console</a></div></li><div class=dropdown><a class="nav-item nav-link mr-md-2 dropdown-toggle" href=# role=button id=header-psr-container-messenger-v1 data-toggle=dropdown aria-haspopup=true aria-expanded=false>Version v1</a><div class=dropdown-menu aria-labelledby=header-psr-container-messenger-v1><a class=dropdown-item href=https://xtreamwayz.github.io/psr-container-messenger/latest/>Latest (v2)</a>
 <a class=dropdown-item href=https://xtreamwayz.github.io/psr-container-messenger/v1/>v1</a></div></div></ul></nav></header><main class=app-content><article class=container><header><h1>Getting started</h1></header><div class=d-flex><div class=flex-grow-1><nav id=TableOfContents><ul><li><a href=#installation>Installation</a></li><li><a href=#command-query-and-event-buses>Command, Query and Event buses</a></li><li><a href=#configuration>Configuration</a><ul><li><a href=#using-the-bus-in-your-middleware-or-handler>Using the bus in your middleware or handler</a></li></ul></li></ul></nav></div><nav class="nav flex-column nav-pills mb-4"><a class="nav-link btn btn-sm btn-primary m-1" href=https://github.com/xtreamwayz/psr-container-messenger>Source</a>
@@ -15,14 +15,14 @@ configuration is added automatically added to your expressive application.</p><h
 </span><span class=lnt>6
 </span><span class=lnt>7
 </span><span class=lnt>8
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php>// Each dispatched command must have one handler
-$commandBus = $container-&gt;get(&#39;messenger.command.bus&#39;);
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=c1>// Each dispatched command must have one handler
+</span><span class=c1></span><span class=nv>$commandBus</span> <span class=o>=</span> <span class=nv>$container</span><span class=o>-&gt;</span><span class=na>get</span><span class=p>(</span><span class=s1>&#39;messenger.command.bus&#39;</span><span class=p>);</span>
 
-// Each dispatched event may have zero or more handlers
-$eventBus = $container-&gt;get(&#39;messenger.event.bus&#39;);
+<span class=c1>// Each dispatched event may have zero or more handlers
+</span><span class=c1></span><span class=nv>$eventBus</span> <span class=o>=</span> <span class=nv>$container</span><span class=o>-&gt;</span><span class=na>get</span><span class=p>(</span><span class=s1>&#39;messenger.event.bus&#39;</span><span class=p>);</span>
 
-// Each dispatched query must have one handler and returns a result
-$queryBus = $container-&gt;get(&#39;messenger.query.bus&#39;);
+<span class=c1>// Each dispatched query must have one handler and returns a result
+</span><span class=c1></span><span class=nv>$queryBus</span> <span class=o>=</span> <span class=nv>$container</span><span class=o>-&gt;</span><span class=na>get</span><span class=p>(</span><span class=s1>&#39;messenger.query.bus&#39;</span><span class=p>);</span>
 </code></pre></td></tr></table></div></div><p>There is no middleware configured. You need to add this your self as the order is important. Look at the examples
 to get some ideas.</p><h2 id=configuration>Configuration</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
@@ -113,7 +113,7 @@ to get some ideas.</p><h2 id=configuration>Configuration</h2><div class=highligh
 </span><span class=lnt>87
 </span><span class=lnt>88
 </span><span class=lnt>89
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=cp>&lt;?php</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=o>&lt;?</span><span class=nx>php</span>
 
 <span class=k>declare</span><span class=p>(</span><span class=nx>strict_types</span><span class=o>=</span><span class=mi>1</span><span class=p>);</span>
 
@@ -239,7 +239,7 @@ to get some ideas.</p><h2 id=configuration>Configuration</h2><div class=highligh
 </span><span class=lnt>35
 </span><span class=lnt>36
 </span><span class=lnt>37
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=cp>&lt;?php</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=o>&lt;?</span><span class=nx>php</span>
 
 <span class=k>declare</span><span class=p>(</span><span class=nx>strict_types</span><span class=o>=</span><span class=mi>1</span><span class=p>);</span>
 
@@ -276,4 +276,4 @@ to get some ideas.</p><h2 id=configuration>Configuration</h2><div class=highligh
         <span class=k>return</span> <span class=k>new</span> <span class=nx>JsonResponse</span><span class=p>([],</span> <span class=mi>204</span><span class=p>);</span>
     <span class=p>}</span>
 <span class=p>}</span>
-</code></pre></td></tr></table></div></div><footer class="my-5 text-muted">This page, including the code samples, is licensed under the <a href=https://creativecommons.org/licenses/by/4.0/>Creative Commons CC BY 4.0</a> license.</footer></article></main><footer class="app-footer p-3"><div class=container><p class=text-center>&copy; 2016-2020 <a href=https://geerteltink.github.io/>Geert Eltink</a></p></div></footer><script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js integrity=sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV crossorigin=anonymous></script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-151173516-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>
+</code></pre></td></tr></table></div></div><footer class="my-5 text-muted">This page, including the code samples, is licensed under the <a href=https://creativecommons.org/licenses/by/4.0/>Creative Commons CC BY 4.0</a> license.</footer></article></main><footer class="app-footer p-3"><div class=container><p class=text-center>&copy; 2016-2021 <a href=https://geerteltink.github.io/>Geert Eltink</a></p></div></footer><script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js integrity=sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV crossorigin=anonymous></script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-151173516-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>
