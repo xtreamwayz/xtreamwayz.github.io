@@ -3,9 +3,7 @@ name: github pages
 on:
   push:
     branches:
-      - master
-  schedule:
-    - cron: '30 3 * * *'
+      - main
 
 jobs:
   deploy:
