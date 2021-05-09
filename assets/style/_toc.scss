@@ -1,19 +1,19 @@
 #TableOfContents {
-    padding-left: 2rem;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
 }
 
 #TableOfContents,
 #TableOfContents a {
-    color: $gray-600;
+  color: $gray-600;
 }
 
 #TableOfContents ul {
-    list-style-type: none;
-    padding-left: 0;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 #TableOfContents > ul {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
