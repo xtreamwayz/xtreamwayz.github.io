@@ -1,26 +1,143 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><title>API form elements &ndash; xtreamwayz</title><link rel=stylesheet href=https://xtreamwayz.github.io/style/main.min.c656e2563e5ffe4b2d0e688ce1ba22f00211cfcf2f115b105ed6215b53835ab9644634af76b41ea6d93d211955692a8074668bc417ab2c5f3e4ccb21fcac1fbd.css integrity="sha512-xlbiVj5f/kstDmiM4boi8AIRz88vEVsQXtYhW1ODWrlkRjSvdrQeptk9IRlVaSqAdGaLxBerLF8+TMsh/KwfvQ==" media=screen></head><body class=app><header class="app-header navbar navbar-expand navbar-dark bg-dark text-white"><nav class="nav-container container"><a class="navbar-brand text-primary text-uppercase font-weight-bold" href=https://xtreamwayz.github.io/ aria-label="It starts with an idea">xtreamwayz</a><ul class="navbar-nav mr-auto"><li class="nav-item dropdown"><a class="nav-item nav-link dropdown-toggle mr-md-2" href=# id=bd-projects data-toggle=dropdown aria-haspopup=true aria-expanded=false>html-form-validator</a><div class="dropdown-menu dropdown-menu-right" aria-labelledby=bd-projects><a class=dropdown-item href=https://xtreamwayz.github.io/psr-container-messenger/>psr-container-messenger</a>
-<a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/>html-form-validator</a>
-<a class=dropdown-item href=https://xtreamwayz.github.io/mezzio-console/>mezzio-console</a></div></li><div class=dropdown><a class="nav-item nav-link mr-md-2 dropdown-toggle" href=# role=button id=header-html-form-validator-v1 data-toggle=dropdown aria-haspopup=true aria-expanded=false>Version v1</a><div class=dropdown-menu aria-labelledby=header-html-form-validator-v1><a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/latest/>Latest (v1)</a></div></div></ul></nav></header><main class=app-content><article class=container><header><h1>API form elements</h1></header><div class=d-flex><div class=flex-grow-1><nav id=TableOfContents><ul><li><a href=#the-input-element>The input element</a><ul><li><a href=#hidden-state-typehidden>Hidden state (type=hidden)</a></li><li><a href=#text-state-typetext-and-search-state-typesearch>Text state (type=text) and Search state (type=search)</a></li><li><a href=#telephone-state-typetel>Telephone state (type=tel)</a></li><li><a href=#url-state-typeurl>URL state (type=url)</a></li><li><a href=#e-mail-state-typeemail>E-mail state (type=email)</a></li><li><a href=#password-state-typepassword>Password state (type=password)</a></li><li><a href=#date-state-typedate>Date state (type=date)</a></li><li><a href=#month-state-typemonth>Month state (type=month)</a></li><li><a href=#week-state-typeweek>Week state (type=week)</a></li><li><a href=#time-state-typetime>Time state (type=time)</a></li><li><a href=#local-date-and-time-state-typedatetime-local>Local Date and Time state (type=datetime-local)</a></li><li><a href=#number-state-typenumber>Number state (type=number)</a></li><li><a href=#range-state-typerange>Range state (type=range)</a></li><li><a href=#colour-state-typecolor>Colour state (type=color)</a></li><li><a href=#checkbox-state-typecheckbox>Checkbox state (type=checkbox)</a></li><li><a href=#radio-button-state-typeradio>Radio Button state (type=radio)</a></li><li><a href=#file-upload-state-typefile>File Upload state (type=file)</a></li><li><a href=#submit-button-state-typesubmit>Submit Button state (type=submit)</a></li><li><a href=#image-button-state-typeimage>Image Button state (type=image)</a></li><li><a href=#button-state-typebutton>Button state (type=button)</a></li></ul></li><li><a href=#the-button-element>The button element</a></li><li><a href=#the-select-element>The select element</a></li><li><a href=#the-textarea-element>The textarea element</a></li></ul></nav></div><nav class="nav flex-column nav-pills mb-4"><a class="nav-link btn btn-sm btn-primary m-1" href=https://github.com/xtreamwayz/html-form-validator>Source</a>
-<a class="nav-link btn btn-sm btn-primary m-1" href="https://github.com/xtreamwayz/html-form-validator/issues/new?template=bug-report.md&title=docs:%20issue%20with%20html-form-validator%2flatest%2fapi-form-elements.md">Report issue</a></nav></div><p>The form validator detects HTML5 form elements and adds default validators depending on the used attributes.
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>API form elements &ndash; xtreamwayz</title>
+<link rel=stylesheet href=https://xtreamwayz.github.io/style/main.min.c40c22003b6ba7e7d8ad0e7a71580625b2fd499dbf0524e1fbc28b0532d3ca59b34ac6bf4383646b2948890f626fd257a46dc2c4ec2c8e4fcb5c9dfe8457ae4f.css integrity="sha512-xAwiADtrp+fYrQ56cVgGJbL9SZ2/BSTh+8KLBTLTylmzSsa/Q4NkaylIiQ9ib9JXpG3CxOwsjk/LXJ3+hFeuTw==" media=screen>
+</head>
+<body class=app>
+<header class="app-header navbar navbar-expand navbar-dark bg-dark text-white">
+<nav class="nav-container container">
+<a class="navbar-brand text-primary text-uppercase font-weight-bold" href=https://xtreamwayz.github.io/ aria-label="It starts with an idea">
+xtreamwayz
+</a>
+<ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" href=# id=bd-projects data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+html-form-validator
+</a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby=bd-projects>
+<a class=dropdown-item href=https://xtreamwayz.github.io/psr-container-messenger/>
+psr-container-messenger
+</a>
+<a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/>
+html-form-validator
+</a>
+<a class=dropdown-item href=https://xtreamwayz.github.io/mezzio-console/>
+mezzio-console
+</a>
+</div>
+</li><div class=dropdown>
+<a class="nav-item nav-link mr-md-2 dropdown-toggle" href=# role=button id=header-html-form-validator-v1 data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+Version v1
+</a>
+<div class=dropdown-menu aria-labelledby=header-html-form-validator-v1>
+<a class=dropdown-item href=https://xtreamwayz.github.io/html-form-validator/latest/>
+Latest (v1)
+</a>
+</div>
+</div></ul>
+</nav>
+</header>
+<main class=app-content>
+<article class=container>
+<header>
+<h1>API form elements</h1>
+</header>
+<div class=d-flex>
+<div class=flex-grow-1>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#the-input-element>The input element</a>
+<ul>
+<li><a href=#hidden-state-typehidden>Hidden state (type=hidden)</a></li>
+<li><a href=#text-state-typetext-and-search-state-typesearch>Text state (type=text) and Search state (type=search)</a></li>
+<li><a href=#telephone-state-typetel>Telephone state (type=tel)</a></li>
+<li><a href=#url-state-typeurl>URL state (type=url)</a></li>
+<li><a href=#e-mail-state-typeemail>E-mail state (type=email)</a></li>
+<li><a href=#password-state-typepassword>Password state (type=password)</a></li>
+<li><a href=#date-state-typedate>Date state (type=date)</a></li>
+<li><a href=#month-state-typemonth>Month state (type=month)</a></li>
+<li><a href=#week-state-typeweek>Week state (type=week)</a></li>
+<li><a href=#time-state-typetime>Time state (type=time)</a></li>
+<li><a href=#local-date-and-time-state-typedatetime-local>Local Date and Time state (type=datetime-local)</a></li>
+<li><a href=#number-state-typenumber>Number state (type=number)</a></li>
+<li><a href=#range-state-typerange>Range state (type=range)</a></li>
+<li><a href=#colour-state-typecolor>Colour state (type=color)</a></li>
+<li><a href=#checkbox-state-typecheckbox>Checkbox state (type=checkbox)</a></li>
+<li><a href=#radio-button-state-typeradio>Radio Button state (type=radio)</a></li>
+<li><a href=#file-upload-state-typefile>File Upload state (type=file)</a></li>
+<li><a href=#submit-button-state-typesubmit>Submit Button state (type=submit)</a></li>
+<li><a href=#image-button-state-typeimage>Image Button state (type=image)</a></li>
+<li><a href=#button-state-typebutton>Button state (type=button)</a></li>
+</ul>
+</li>
+<li><a href=#the-button-element>The button element</a></li>
+<li><a href=#the-select-element>The select element</a></li>
+<li><a href=#the-textarea-element>The textarea element</a></li>
+</ul>
+</nav>
+</div>
+<nav class="nav flex-column nav-pills mb-4">
+<a class="nav-link btn btn-sm btn-primary m-1" href=https://github.com/xtreamwayz/html-form-validator>
+Source
+</a>
+<a class="nav-link btn btn-sm btn-primary m-1" href="https://github.com/xtreamwayz/html-form-validator/issues/new?template=bug-report.md&title=docs:%20issue%20with%20html-form-validator%2flatest%2fapi-form-elements.md">
+Report issue
+</a>
+</nav>
+</div>
+<p>The form validator detects HTML5 form elements and adds default validators depending on the used attributes.
 Standard validation rules are added for you so you don&rsquo;t need to repeat those over and over again. And then
-there are the special attributes with trigger standard validation:</p><ul><li>[[max|API Attributes#max]]</li><li>[[min|API Attributes#min]]</li><li>[[step|API Attributes#step]]</li><li>[[maxlength|API Attributes#maxlength]]</li><li>[[minlength|API Attributes#minlength]]</li><li>[[multiple|API Attributes#multiple]]</li><li>[[pattern|API Attributes#pattern]]</li><li>[[required|API Attributes#required]], [[aria-required|API Attributes#aria-required]]</li></ul><p>And if you need more validation or specific filters there is a [[data-filters|API Attributes#data-filters]] and
-[[data-validators|API Attributes#data-validators]] attribute.</p><p>A full blown text input might look like:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+there are the special attributes with trigger standard validation:</p>
+<ul>
+<li>[[max|API Attributes#max]]</li>
+<li>[[min|API Attributes#min]]</li>
+<li>[[step|API Attributes#step]]</li>
+<li>[[maxlength|API Attributes#maxlength]]</li>
+<li>[[minlength|API Attributes#minlength]]</li>
+<li>[[multiple|API Attributes#multiple]]</li>
+<li>[[pattern|API Attributes#pattern]]</li>
+<li>[[required|API Attributes#required]], [[aria-required|API Attributes#aria-required]]</li>
+</ul>
+<p>And if you need more validation or specific filters there is a [[data-filters|API Attributes#data-filters]] and
+[[data-validators|API Attributes#data-validators]] attribute.</p>
+<p>A full blown text input might look like:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
 </span><span class=lnt>5
 </span><span class=lnt>6
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;username&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;username&#34;</span> <span class=na>required</span>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;username&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;username&#34;</span> <span class=na>required</span>
        <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;Your username&#34;</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;form-control&#34;</span>
        <span class=na>pattern</span><span class=o>=</span><span class=s>&#34;[a-z]{2,}&#34;</span> <span class=na>minlength</span><span class=o>=</span><span class=s>&#34;2&#34;</span> <span class=na>maxlength</span><span class=o>=</span><span class=s>&#34;16&#34;</span>
        <span class=na>data-reuse-submitted-value</span><span class=o>=</span><span class=s>&#34;true&#34;</span>
        <span class=na>data-filters</span><span class=o>=</span><span class=s>&#34;striptags|stringtrim&#34;</span>
        <span class=na>data-validators</span><span class=o>=</span><span class=s>&#34;&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><h2 id=the-input-element>The input element</h2><h3 id=hidden-state-typehidden>Hidden state (type=hidden)</h3><p><em>Attributes:</em>
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;hidden&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;name&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#hidden-state-(type=hidden)">whatwg</a></p><h3 id=text-state-typetext-and-search-state-typesearch>Text state (type=text) and Search state (type=search)</h3><p>The difference between the Text state and the Search state is primarily stylistic.</p><p><em>Attributes:</em>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=the-input-element>The input element</h2>
+<h3 id=hidden-state-typehidden>Hidden state (type=hidden)</h3>
+<p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;hidden&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;name&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#hidden-state-(type=hidden)">whatwg</a></p>
+<h3 id=text-state-typetext-and-search-state-typesearch>Text state (type=text) and Search state (type=search)</h3>
+<p>The difference between the Text state and the Search state is primarily stylistic.</p>
+<p><em>Attributes:</em>
 [[list|API Attributes#list]],
 [[maxlength|API Attributes#maxlength]],
 [[minlength|API Attributes#minlength]],
@@ -28,10 +145,20 @@ there are the special attributes with trigger standard validation:</p><ul><li>[[
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><p><em>Filters:</em> Strip line breaks from the value.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;name&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#text-(type=text)-state-and-search-state-(type=search)">whatwg</a></p><h3 id=telephone-state-typetel>Telephone state (type=tel)</h3><p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<p><em>Filters:</em> Strip line breaks from the value.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;name&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#text-(type=text)-state-and-search-state-(type=search)">whatwg</a></p>
+<h3 id=telephone-state-typetel>Telephone state (type=tel)</h3>
+<p><em>Attributes:</em>
 [[list|API Attributes#list]],
 [[maxlength|API Attributes#maxlength]],
 [[minlength|API Attributes#minlength]],
@@ -39,11 +166,22 @@ there are the special attributes with trigger standard validation:</p><ul><li>[[
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><p><em>Filters:</em> Strip line breaks from the value.</p><p>If the <code>data-validator-country</code> attribute is set the <code>PhoneNumberValidator</code> is used. If not, it falls back to a
-very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;tel&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;tel&#34;</span> <span class=na>data-validator-country</span><span class=o>=</span><span class=s>&#34;es&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#telephone-state-(type=tel)">whatwg</a></p><h3 id=url-state-typeurl>URL state (type=url)</h3><p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<p><em>Filters:</em> Strip line breaks from the value.</p>
+<p>If the <code>data-validator-country</code> attribute is set the <code>PhoneNumberValidator</code> is used. If not, it falls back to a
+very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code>.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;tel&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;tel&#34;</span> <span class=na>data-validator-country</span><span class=o>=</span><span class=s>&#34;es&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#telephone-state-(type=tel)">whatwg</a></p>
+<h3 id=url-state-typeurl>URL state (type=url)</h3>
+<p><em>Attributes:</em>
 [[list|API Attributes#list]],
 [[maxlength|API Attributes#maxlength]],
 [[minlength|API Attributes#minlength]],
@@ -51,7 +189,11 @@ very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><p><em>Filters:</em> Strip line breaks from the value.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+[[value|API Attributes#value]].</p>
+<p><em>Filters:</em> Strip line breaks from the value.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
@@ -60,7 +202,9 @@ very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code
 </span><span class=lnt>7
 </span><span class=lnt>8
 </span><span class=lnt>9
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;url&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;location&#34;</span> <span class=na>list</span><span class=o>=</span><span class=s>&#34;urls&#34;</span><span class=p>&gt;</span>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;url&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;location&#34;</span> <span class=na>list</span><span class=o>=</span><span class=s>&#34;urls&#34;</span><span class=p>&gt;</span>
 <span class=p>&lt;</span><span class=nt>datalist</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;urls&#34;</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>option</span> <span class=na>label</span><span class=o>=</span><span class=s>&#34;MIME: Format of Internet Message Bodies&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;https://tools.ietf.org/html/rfc2045&#34;</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>option</span> <span class=na>label</span><span class=o>=</span><span class=s>&#34;HTML&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;https://html.spec.whatwg.org/&#34;</span><span class=p>&gt;</span>
@@ -69,8 +213,12 @@ very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code
     <span class=p>&lt;</span><span class=nt>option</span> <span class=na>label</span><span class=o>=</span><span class=s>&#34;Media Session&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;https://mediasession.spec.whatwg.org/&#34;</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>option</span> <span class=na>label</span><span class=o>=</span><span class=s>&#34;The Single UNIX Specification, Version 3&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;http://www.unix.org/version3/&#34;</span><span class=p>&gt;</span>
 <span class=p>&lt;/</span><span class=nt>datalist</span><span class=p>&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#url-state-(type=url)">whatwg</a></p><h3 id=e-mail-state-typeemail>E-mail state (type=email)</h3><p><em>Attributes:</em>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#url-state-(type=url)">whatwg</a></p>
+<h3 id=e-mail-state-typeemail>E-mail state (type=email)</h3>
+<p><em>Attributes:</em>
 [[list|API Attributes#list]],
 [[maxlength|API Attributes#maxlength]],
 [[minlength|API Attributes#minlength]],
@@ -79,20 +227,40 @@ very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><p><em>Filters:</em> Strip line breaks from the value, then strip leading and trailing whitespace from the value.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;email&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;email&#34;</span> <span class=na>data-validator-use-mx-check</span><span class=o>=</span><span class=s>&#34;true&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#e-mail-state-(type=email)">whatwg</a></p><h3 id=password-state-typepassword>Password state (type=password)</h3><p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<p><em>Filters:</em> Strip line breaks from the value, then strip leading and trailing whitespace from the value.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;email&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;email&#34;</span> <span class=na>data-validator-use-mx-check</span><span class=o>=</span><span class=s>&#34;true&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#e-mail-state-(type=email)">whatwg</a></p>
+<h3 id=password-state-typepassword>Password state (type=password)</h3>
+<p><em>Attributes:</em>
 [[maxlength|API Attributes#maxlength]],
 [[minlength|API Attributes#minlength]],
 [[pattern|API Attributes#pattern]],
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><p><em>Filters:</em> Strip line breaks from the value.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;password&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;password&#34;</span> <span class=na>required</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#password-state-(type=password)">whatwg</a></p><h3 id=date-state-typedate>Date state (type=date)</h3><p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<p><em>Filters:</em> Strip line breaks from the value.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;password&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;password&#34;</span> <span class=na>required</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#password-state-(type=password)">whatwg</a></p>
+<h3 id=date-state-typedate>Date state (type=date)</h3>
+<p><em>Attributes:</em>
 [[list|API Attributes#list]],
 [[max|API Attributes#max]],
 [[min|API Attributes#min]],
@@ -100,10 +268,19 @@ very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;date&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;date&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#date-state-(type=date)">whatwg</a></p><h3 id=month-state-typemonth>Month state (type=month)</h3><p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;date&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;date&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#date-state-(type=date)">whatwg</a></p>
+<h3 id=month-state-typemonth>Month state (type=month)</h3>
+<p><em>Attributes:</em>
 [[list|API Attributes#list]],
 [[max|API Attributes#max]],
 [[min|API Attributes#min]],
@@ -111,10 +288,19 @@ very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;month&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;month&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#month-state-(type=month)">whatwg</a></p><h3 id=week-state-typeweek>Week state (type=week)</h3><p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;month&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;month&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#month-state-(type=month)">whatwg</a></p>
+<h3 id=week-state-typeweek>Week state (type=week)</h3>
+<p><em>Attributes:</em>
 [[list|API Attributes#list]],
 [[max|API Attributes#max]],
 [[min|API Attributes#min]],
@@ -122,10 +308,19 @@ very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;week&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;week&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#week-state-(type=week)">whatwg</a></p><h3 id=time-state-typetime>Time state (type=time)</h3><p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;week&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;week&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#week-state-(type=week)">whatwg</a></p>
+<h3 id=time-state-typetime>Time state (type=time)</h3>
+<p><em>Attributes:</em>
 [[list|API Attributes#list]],
 [[max|API Attributes#max]],
 [[min|API Attributes#min]],
@@ -133,10 +328,19 @@ very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;time&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;time&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#time-state-(type=time)">whatwg</a></p><h3 id=local-date-and-time-state-typedatetime-local>Local Date and Time state (type=datetime-local)</h3><p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;time&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;time&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#time-state-(type=time)">whatwg</a></p>
+<h3 id=local-date-and-time-state-typedatetime-local>Local Date and Time state (type=datetime-local)</h3>
+<p><em>Attributes:</em>
 [[list|API Attributes#list]],
 [[max|API Attributes#max]],
 [[min|API Attributes#min]],
@@ -144,7 +348,10 @@ very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -162,7 +369,9 @@ very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code
 </span><span class=lnt>16
 </span><span class=lnt>17
 </span><span class=lnt>18
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>fieldset</span><span class=p>&gt;</span>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>fieldset</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>legend</span><span class=p>&gt;</span>Destination<span class=p>&lt;/</span><span class=nt>legend</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span>
         <span class=p>&lt;</span><span class=nt>label</span><span class=p>&gt;</span>Airport:<span class=p>&lt;/</span><span class=nt>label</span><span class=p>&gt;</span>
@@ -180,8 +389,12 @@ very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code
     <span class=p>&lt;</span><span class=nt>option</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;LAX&#34;</span> <span class=na>label</span><span class=o>=</span><span class=s>&#34;Los Angeles&#34;</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>option</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;FRA&#34;</span> <span class=na>label</span><span class=o>=</span><span class=s>&#34;Frankfurt&#34;</span><span class=p>&gt;</span>
 <span class=p>&lt;/</span><span class=nt>datalist</span><span class=p>&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#local-date-and-time-state-(type=datetime-local)">whatwg</a></p><h3 id=number-state-typenumber>Number state (type=number)</h3><p><em>Attributes:</em>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#local-date-and-time-state-(type=datetime-local)">whatwg</a></p>
+<h3 id=number-state-typenumber>Number state (type=number)</h3>
+<p><em>Attributes:</em>
 [[list|API Attributes#list]],
 [[max|API Attributes#max]],
 [[min|API Attributes#min]],
@@ -189,15 +402,25 @@ very loose regex pattern if none is set: <code>^\+[0-9]{1,3}[0-9\s]{4,17}$</code
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><p>The default step is 1, allowing only integers to be selected by the user. Unless the step base has a non-integer
+[[value|API Attributes#value]].</p>
+<p>The default step is 1, allowing only integers to be selected by the user. Unless the step base has a non-integer
 (float) value in which case floats are allowed.
 The base value of step equals the min value if it exists, otherwise it is set to <code>0</code>.
-To disable the step validation use <code>step="any"</code>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+To disable the step validation use <code>step="any"</code>.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>label</span><span class=p>&gt;</span>How much do you want to charge? $<span class=p>&lt;/</span><span class=nt>label</span><span class=p>&gt;</span>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>label</span><span class=p>&gt;</span>How much do you want to charge? $<span class=p>&lt;/</span><span class=nt>label</span><span class=p>&gt;</span>
 <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;number&#34;</span> <span class=na>min</span><span class=o>=</span><span class=s>&#34;0&#34;</span> <span class=na>step</span><span class=o>=</span><span class=s>&#34;0.01&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;price&#34;</span><span class=p>&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href=https://html.spec.whatwg.org/multipage/forms.html#number-state>whatwg</a></p><h3 id=range-state-typerange>Range state (type=range)</h3><p><em>Attributes:</em>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href=https://html.spec.whatwg.org/multipage/forms.html#number-state>whatwg</a></p>
+<h3 id=range-state-typerange>Range state (type=range)</h3>
+<p><em>Attributes:</em>
 [[list|API Attributes#list]],
 [[max|API Attributes#max]],
 [[min|API Attributes#min]],
@@ -206,7 +429,10 @@ To disable the step validation use <code>step="any"</code>.</p><div class=highli
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -221,7 +447,9 @@ To disable the step validation use <code>step="any"</code>.</p><div class=highli
 </span><span class=lnt>13
 </span><span class=lnt>14
 </span><span class=lnt>15
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>form</span> <span class=err>...</span><span class=p>&gt;</span>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>form</span> <span class=err>...</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>fieldset</span><span class=p>&gt;</span>
         <span class=p>&lt;</span><span class=nt>legend</span><span class=p>&gt;</span>Outbound flight time<span class=p>&lt;/</span><span class=nt>legend</span><span class=p>&gt;</span>
         <span class=p>&lt;</span><span class=nt>select</span> <span class=err>...</span><span class=p>&gt;</span>
@@ -236,90 +464,208 @@ To disable the step validation use <code>step="any"</code>.</p><div class=highli
     <span class=p>&lt;/</span><span class=nt>fieldset</span><span class=p>&gt;</span>
     ...
 <span class=p>&lt;/</span><span class=nt>form</span><span class=p>&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#range-state-(type=range)">whatwg</a></p><h3 id=colour-state-typecolor>Colour state (type=color)</h3><p><em>Attributes:</em>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#range-state-(type=range)">whatwg</a></p>
+<h3 id=colour-state-typecolor>Colour state (type=color)</h3>
+<p><em>Attributes:</em>
 [[list|API Attributes#list]],
 [[disabled|API Attributes#disabled]],
-[[value|API Attributes#value]].</p><p><em>Filters:</em> Convert the value to lowercase.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;color&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;color&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#color-state-(type=color)">whatwg</a></p><h3 id=checkbox-state-typecheckbox>Checkbox state (type=checkbox)</h3><p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<p><em>Filters:</em> Convert the value to lowercase.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;color&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;color&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#color-state-(type=color)">whatwg</a></p>
+<h3 id=checkbox-state-typecheckbox>Checkbox state (type=checkbox)</h3>
+<p><em>Attributes:</em>
 [[checked|API Attributes#checked]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;checkbox&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;checkbox&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;value&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Input arrays are supported. The following will return an array <code>['cars'=>['audi', 'bmw']]</code>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;checkbox&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;checkbox&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;value&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Input arrays are supported. The following will return an array <code>['cars'=>['audi', 'bmw']]</code>.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
 </span><span class=lnt>5
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>form</span> <span class=na>action</span><span class=o>=</span><span class=s>&#34;/&#34;</span> <span class=na>method</span><span class=o>=</span><span class=s>&#34;post&#34;</span><span class=p>&gt;</span>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>form</span> <span class=na>action</span><span class=o>=</span><span class=s>&#34;/&#34;</span> <span class=na>method</span><span class=o>=</span><span class=s>&#34;post&#34;</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;checkbox&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;cars[]&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;audi&#34;</span> <span class=na>checked</span> <span class=p>/&gt;</span>
     <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;checkbox&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;cars[]&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;bmw&#34;</span> <span class=na>checked</span> <span class=p>/&gt;</span>
     <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;checkbox&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;cars[]&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;volkswagen&#34;</span> <span class=p>/&gt;</span>
 <span class=p>&lt;/</span><span class=nt>form</span><span class=p>&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#checkbox-state-(type=checkbox)">whatwg</a></p><h3 id=radio-button-state-typeradio>Radio Button state (type=radio)</h3><p><em>Attributes:</em>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#checkbox-state-(type=checkbox)">whatwg</a></p>
+<h3 id=radio-button-state-typeradio>Radio Button state (type=radio)</h3>
+<p><em>Attributes:</em>
 [[checked|API Attributes#checked]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;radio&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;gender&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;male&#34;</span> <span class=p>/&gt;</span> Male<span class=p>&lt;</span><span class=nt>br</span> <span class=p>/&gt;</span>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;radio&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;gender&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;male&#34;</span> <span class=p>/&gt;</span> Male<span class=p>&lt;</span><span class=nt>br</span> <span class=p>/&gt;</span>
 <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;radio&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;gender&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;female&#34;</span> <span class=p>/&gt;</span> Female<span class=p>&lt;</span><span class=nt>br</span> <span class=p>/&gt;</span>
 <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;radio&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;gender&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;other&#34;</span> <span class=p>/&gt;</span> Other
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#radio-button-state-(type=radio)">whatwg</a></p><h3 id=file-upload-state-typefile>File Upload state (type=file)</h3><p><em>Attributes:</em>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#radio-button-state-(type=radio)">whatwg</a></p>
+<h3 id=file-upload-state-typefile>File Upload state (type=file)</h3>
+<p><em>Attributes:</em>
 [[accept|API Attributes#accept]],
 [[multiple|API Attributes#multiple]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;file&#34;</span> <span class=na>accept</span><span class=o>=</span><span class=s>&#34;.doc,.docx,.xml,application/msword&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#file-upload-state-(type=file)">whatwg</a></p><h3 id=submit-button-state-typesubmit>Submit Button state (type=submit)</h3><p><em>Attributes:</em>
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;submit&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;name&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#submit-button-state-(type=submit)">whatwg</a></p><h3 id=image-button-state-typeimage>Image Button state (type=image)</h3><p><em>Attributes:</em>
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;file&#34;</span> <span class=na>accept</span><span class=o>=</span><span class=s>&#34;.doc,.docx,.xml,application/msword&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#file-upload-state-(type=file)">whatwg</a></p>
+<h3 id=submit-button-state-typesubmit>Submit Button state (type=submit)</h3>
+<p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;submit&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;name&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#submit-button-state-(type=submit)">whatwg</a></p>
+<h3 id=image-button-state-typeimage>Image Button state (type=image)</h3>
+<p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>form</span> <span class=na>action</span><span class=o>=</span><span class=s>&#34;process.cgi&#34;</span><span class=p>&gt;</span>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>form</span> <span class=na>action</span><span class=o>=</span><span class=s>&#34;process.cgi&#34;</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;image&#34;</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;map.png&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;where&#34;</span> <span class=na>alt</span><span class=o>=</span><span class=s>&#34;Show location list&#34;</span><span class=p>&gt;</span>
 <span class=p>&lt;/</span><span class=nt>form</span><span class=p>&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#image-button-state-(type=image)">whatwg</a></p><h3 id=button-state-typebutton>Button state (type=button)</h3><p><em>Attributes:</em>
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;button&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;name&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;&#34;</span> <span class=p>/&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href="https://html.spec.whatwg.org/multipage/forms.html#button-state-(type=button)">whatwg</a></p><h2 id=the-button-element>The button element</h2><p><em>Attributes:</em>
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>button</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;submit&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;name&#34;</span><span class=p>&gt;</span>Value<span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href=https://html.spec.whatwg.org/multipage/forms.html#the-button-element>whatwg</a></p><h2 id=the-select-element>The select element</h2><p><em>Attributes:</em>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#image-button-state-(type=image)">whatwg</a></p>
+<h3 id=button-state-typebutton>Button state (type=button)</h3>
+<p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;button&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;name&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href="https://html.spec.whatwg.org/multipage/forms.html#button-state-(type=button)">whatwg</a></p>
+<h2 id=the-button-element>The button element</h2>
+<p><em>Attributes:</em>
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>button</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;submit&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;name&#34;</span><span class=p>&gt;</span>Value<span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href=https://html.spec.whatwg.org/multipage/forms.html#the-button-element>whatwg</a></p>
+<h2 id=the-select-element>The select element</h2>
+<p><em>Attributes:</em>
 [[multiple|API Attributes#multiple]],
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
 [[required|API Attributes#required]],
-[[value|API Attributes#value]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+[[value|API Attributes#value]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
 </span><span class=lnt>5
 </span><span class=lnt>6
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>select</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;car&#34;</span><span class=p>&gt;</span>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>select</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;car&#34;</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>option</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;volvo&#34;</span><span class=p>&gt;</span>Volvo<span class=p>&lt;/</span><span class=nt>option</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>option</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;saab&#34;</span><span class=p>&gt;</span>Saab<span class=p>&lt;/</span><span class=nt>option</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>option</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;mercedes&#34;</span><span class=p>&gt;</span>Mercedes<span class=p>&lt;/</span><span class=nt>option</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>option</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;audi&#34;</span><span class=p>&gt;</span>Audi<span class=p>&lt;/</span><span class=nt>option</span><span class=p>&gt;</span>
 <span class=p>&lt;/</span><span class=nt>select</span><span class=p>&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href=https://html.spec.whatwg.org/multipage/forms.html#the-select-element>whatwg</a></p><h2 id=the-textarea-element>The textarea element</h2><p><em>Attributes:</em>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href=https://html.spec.whatwg.org/multipage/forms.html#the-select-element>whatwg</a></p>
+<h2 id=the-textarea-element>The textarea element</h2>
+<p><em>Attributes:</em>
 [[maxlength|API Attributes#maxlength]],
 [[minlength|API Attributes#minlength]],
 [[disabled|API Attributes#disabled]],
 [[readonly|API Attributes#readonly]],
-[[required|API Attributes#required]].</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>textarea</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;textarea&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>textarea</span><span class=p>&gt;</span>
-</code></pre></td></tr></table></div></div><p>Resources:
-<a href=https://html.spec.whatwg.org/multipage/forms.html#the-textarea-element>whatwg</a></p><footer class="my-5 text-muted">This page, including the code samples, is licensed under the <a href=https://creativecommons.org/licenses/by/4.0/>Creative Commons CC BY 4.0</a> license.</footer></article></main><footer class="app-footer p-3"><div class=container><p class=text-center>&copy; 2016-2021 <a href=https://geerteltink.github.io/>Geert Eltink</a></p></div></footer><script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js integrity=sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV crossorigin=anonymous></script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-151173516-1','auto'),ga('send','pageview'))</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>
+[[required|API Attributes#required]].</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>textarea</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;textarea&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>textarea</span><span class=p>&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Resources:
+<a href=https://html.spec.whatwg.org/multipage/forms.html#the-textarea-element>whatwg</a></p>
+<footer class="my-5 text-muted">
+This page, including the code samples, is licensed under the <a href=https://creativecommons.org/licenses/by/4.0/>Creative Commons CC BY 4.0</a> license.
+</footer>
+</article>
+</main>
+<footer class="app-footer p-3">
+<div class=container>
+<p class=text-center>
+&copy; 2016-2022 <a href=https://geerteltink.github.io/> Geert Eltink</a>
+</p>
+</div>
+</footer>
+<script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin=anonymous></script>
+<script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js integrity=sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV crossorigin=anonymous></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-151173516-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</body>
+</html>
