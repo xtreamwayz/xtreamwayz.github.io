@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "npm run lint:md && npm run lint:css",
     "lint:md": "markdownlint {archetypes,content}/**/*.md",
-    "lint:css": "stylelint assets/**/*.{css,scss}"
+    "lint:css": "stylelint {assets,content,layouts}/**/*.{css,scss}",
+    "lint:fix": "stylelint {assets,content,layouts}/**/*.{css,scss} --fix"
   },
   "repository": {
     "type": "git",
@@ -18,23 +19,24 @@
   },
   "homepage": "https://github.com/xtreamwayz/xtreamwayz.github.io#readme",
   "dependencies": {
-    "bootstrap": "^4.5",
-    "jquery": "^3.6",
-    "popper.js": "^1.16"
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.15",
-    "@fullhuman/postcss-purgecss": "^4.0",
-    "autoprefixer": "^10.4",
-    "markdownlint": "^0.23",
-    "markdownlint-cli": "^0.28",
-    "postcss-cli": "^9.1",
-    "stylelint": "^13.13",
-    "stylelint-config-idiomatic-order": "^8.1",
-    "stylelint-config-recess-order": "^2.4",
-    "stylelint-config-recommended-scss": "^4.3",
-    "stylelint-config-standard": "^22.0",
-    "stylelint-order": "^4.1",
-    "stylelint-scss": "^3.21"
+    "@fortawesome/fontawesome-free": "^5.15.0",
+    "autoprefixer": "^10.4.0",
+    "markdown-it": "^12.3.2",
+    "markdownlint": "^0.25.1",
+    "markdownlint-cli": "^0.31.1",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "stylelint": "^13.13.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-recess-order": "^2.4.0",
+    "stylelint-config-recommended-scss": "^4.3.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.21.0"
   }
 }
