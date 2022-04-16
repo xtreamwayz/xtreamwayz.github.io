@@ -1,19 +1,20 @@
 # Source code for xtreamwayz.netlify.app
 
-[![Docs Status](https://github.com/xtreamwayz/website/workflows/github-pages/badge.svg)](https://xtreamwayz.netlify.app/)
+[![Continuous Integration](https://github.com/xtreamwayz/xtreamwayz.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/xtreamwayz/xtreamwayz.github.io/actions/workflows/ci.yml)
+[![github pages](https://github.com/xtreamwayz/xtreamwayz.github.io/actions/workflows/github-pages.yml/badge.svg)](https://github.com/xtreamwayz/xtreamwayz.github.io/actions/workflows/github-pages.yml)
 
 ## Development
 
 ```bash
 # init
-docker run --rm --volume $(pwd):/src xtreamwayz/hugo npm install
+docker run --rm --volume $(pwd):/src xtreamwayz/hugo npm ci
 docker run --rm --volume $(pwd):/src xtreamwayz/hugo hugo mod init site
-
-# server
-docker-compose up -d
 
 # build
 docker run --rm --volume $(pwd):/src xtreamwayz/hugo hugo --gc --minify --enableGitInfo --environment production
+
+# server
+docker-compose up -d
 ```
 
 For local development of package documentation, add one of these to `go.mod`
