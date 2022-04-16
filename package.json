@@ -24,7 +24,7 @@
     "popper.js": "^1.16.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.0",
+    "@fortawesome/fontawesome-free": "^6.1.1",
     "autoprefixer": "10.4.0",
     "markdown-it": "^12.3.2",
     "markdownlint": "^0.25.1",
