@@ -13,6 +13,7 @@ module.exports = {
   rules: {
     'at-rule-no-unknown': null,
     'color-function-notation': null,
+    'function-no-unknown': null,
     'max-empty-lines': 4,
     'max-line-length': null,
     'max-nesting-depth': 2,
