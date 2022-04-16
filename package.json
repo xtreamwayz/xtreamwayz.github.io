@@ -28,7 +28,7 @@
     "autoprefixer": "^10.4",
     "markdownlint": "^0.23",
     "markdownlint-cli": "^0.28",
-    "postcss-cli": "^8.3",
+    "postcss-cli": "^9.1",
     "stylelint": "^13.13",
     "stylelint-config-idiomatic-order": "^8.1",
     "stylelint-config-recess-order": "^2.4",
