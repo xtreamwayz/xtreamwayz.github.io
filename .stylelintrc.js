@@ -11,13 +11,13 @@ module.exports = {
   ],
 
   rules: {
-    'max-empty-lines': 4,
-    'max-nesting-depth': 2,
     'at-rule-no-unknown': null,
+    'color-function-notation': null,
+    'max-empty-lines': 4,
+    'max-line-length': null,
+    'max-nesting-depth': 2,
     'scss/at-rule-no-unknown': true,
     'scss/no-global-function-names': null,
-    'function-no-unknown': null,
-    'selector-id-pattern': null,
-    'max-line-length': null
+    'selector-id-pattern': null
   },
 };
