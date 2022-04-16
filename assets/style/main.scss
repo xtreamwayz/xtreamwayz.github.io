@@ -1,13 +1,13 @@
-@import 'variables';
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
-@import 'typography';
-@import 'app';
-@import 'blockquote';
-@import 'code';
-@import 'card';
-@import 'icon';
-@import 'landingpage';
-@import 'toc';
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "typography";
+@import "app";
+@import "blockquote";
+@import "code";
+@import "card";
+@import "icon";
+@import "landingpage";
+@import "toc";
 
 body {
   -webkit-font-smoothing: antialiased;
