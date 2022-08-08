@@ -29,7 +29,7 @@
     "markdown-it": "^13.0.1",
     "markdownlint": "^0.26.1",
     "markdownlint-cli": "^0.32.1",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.16",
     "postcss-cli": "^9.1.0",
     "postcss-less": "^6.0.0",
     "stylelint": "^14.9.1",
