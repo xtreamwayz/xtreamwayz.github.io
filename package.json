@@ -28,7 +28,7 @@
     "autoprefixer": "^10.4.8",
     "markdown-it": "^13.0.1",
     "markdownlint": "^0.26.2",
-    "markdownlint-cli": "^0.32.1",
+    "markdownlint-cli": "^0.32.2",
     "postcss": "^8.4.16",
     "postcss-cli": "^9.1.0",
     "postcss-less": "^6.0.0",
